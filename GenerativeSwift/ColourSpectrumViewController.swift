@@ -21,8 +21,12 @@ class ColourSpectrumViewController: CanvasController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setup() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         ShapeLayer.disableActions = true
+    }
+
+    override func setup() {
         canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.updateGrid(center)
         }
@@ -33,8 +37,6 @@ class ColourSpectrumViewController: CanvasController {
     }
     
     func updateGrid(point: Point) {
-        ShapeLayer.disableActions = true
-        
         for rectangle in grid {
             rectangle.removeFromSuperview()
         }

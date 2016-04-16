@@ -21,6 +21,11 @@ class HelloColourViewController: CanvasController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ShapeLayer.disableActions = true        
+    }
+    
     override func setup() {
         rectangle.strokeColor = nil
         canvas.add(rectangle)
@@ -34,10 +39,9 @@ class HelloColourViewController: CanvasController {
     }
     
     func updateRectangle(point: Point) {
-        ShapeLayer.disableActions = true
-
-        rectangle.frame.width = point.x
-        rectangle.frame.height = point.x * canvas.height / canvas.width
+        let width = point.x + 1
+        rectangle.frame.width = width
+        rectangle.frame.height = width * canvas.height / canvas.width
         rectangle.center = canvas.center
         
         let hue = point.y / canvas.height

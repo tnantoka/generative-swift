@@ -16,6 +16,8 @@
 		9BF8EC081CC1D3DE00901730 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC071CC1D3DE00901730 /* TableViewController.swift */; };
 		9BF8EC0A1CC1D5FF00901730 /* HelloColourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC091CC1D5FF00901730 /* HelloColourViewController.swift */; };
 		9BF8EC0C1CC1E88D00901730 /* ColourSpectrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */; };
+		9BF8EC0E1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */; };
+		9BF8EC101CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		9BF8EC071CC1D3DE00901730 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9BF8EC091CC1D5FF00901730 /* HelloColourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloColourViewController.swift; sourceTree = "<group>"; };
 		9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourSpectrumViewController.swift; sourceTree = "<group>"; };
+		9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourSpectrumCircleViewController.swift; sourceTree = "<group>"; };
+		9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourSpectrumCircle2ViewController.swift; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,8 @@
 				9BF8EC071CC1D3DE00901730 /* TableViewController.swift */,
 				9BF8EC091CC1D5FF00901730 /* HelloColourViewController.swift */,
 				9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */,
+				9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */,
+				9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */,
 			);
 			path = GenerativeSwift;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF8EC0A1CC1D5FF00901730 /* HelloColourViewController.swift in Sources */,
+				9BF8EC0E1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift in Sources */,
 				9BF8EBE81CC1D23500901730 /* AppDelegate.swift in Sources */,
 				9BF8EC081CC1D3DE00901730 /* TableViewController.swift in Sources */,
+				9BF8EC101CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */,
 				9BF8EC0C1CC1E88D00901730 /* ColourSpectrumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
