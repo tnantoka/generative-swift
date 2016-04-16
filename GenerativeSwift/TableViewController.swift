@@ -19,6 +19,7 @@ class TableViewController: UITableViewController {
             ColourSpectrumViewController(),
             ColourSpectrumCircleViewController(),
             ColourSpectrumCircleViewController2(),
+            ColourPaletteInterpolationViewController()
         ]
     ]
     
@@ -32,6 +33,11 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         title = "Generative Swift"
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setToolbarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

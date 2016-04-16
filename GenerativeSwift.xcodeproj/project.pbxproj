@@ -18,6 +18,7 @@
 		9BF8EC0C1CC1E88D00901730 /* ColourSpectrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */; };
 		9BF8EC0E1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */; };
 		9BF8EC101CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */; };
+		9BF8EC121CC20A4400901730 /* ColourPaletteInterpolationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourSpectrumViewController.swift; sourceTree = "<group>"; };
 		9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourSpectrumCircleViewController.swift; sourceTree = "<group>"; };
 		9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourSpectrumCircle2ViewController.swift; sourceTree = "<group>"; };
+		9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPaletteInterpolationViewController.swift; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */,
 				9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */,
 				9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */,
+				9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */,
 			);
 			path = GenerativeSwift;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				9BF8EC081CC1D3DE00901730 /* TableViewController.swift in Sources */,
 				9BF8EC101CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */,
 				9BF8EC0C1CC1E88D00901730 /* ColourSpectrumViewController.swift in Sources */,
+				9BF8EC121CC20A4400901730 /* ColourPaletteInterpolationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,9 +30,12 @@ class ColourSpectrumCircleViewController: CanvasController {
         ShapeLayer.disableActions = true
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setToolbarHidden(false, animated: true)
+    }
+    
     override func setup() {
-        navigationController?.toolbarHidden = false
-        
         slider.frame = CGRectMake(0, 0, CGRectGetWidth(view.bounds) - 40, 34)
         slider.maximumValue = Float(segments.indices.last ?? 0)
         slider.minimumValue = 0
