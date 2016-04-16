@@ -9,7 +9,7 @@
 import UIKit
 import C4
 
-class ColourPaletteRulesViewController: CanvasController {
+class ColourPaletteRulesViewController: BaseCanvasController {
     var grid = [Rectangle]()
     var point = Point(0, 0)
     
@@ -22,18 +22,13 @@ class ColourPaletteRulesViewController: CanvasController {
     
     let segmentedControl = UISegmentedControl(items: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         title = "Colour Palette by Rules"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ShapeLayer.disableActions = true
     }
     
     override func viewWillAppear(animated: Bool) {

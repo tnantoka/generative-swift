@@ -9,21 +9,16 @@
 import UIKit
 import C4
 
-class ColourSpectrumViewController: CanvasController {
+class ColourSpectrumViewController: BaseCanvasController {
     var grid = [Rectangle]()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         title = "Colour Spectrum"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ShapeLayer.disableActions = true
     }
 
     override func setup() {

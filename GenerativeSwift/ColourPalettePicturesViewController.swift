@@ -9,19 +9,14 @@
 import UIKit
 import C4
 
-class ColourPalettePicturesViewController: CanvasController {
-    init() {
-        super.init(nibName: nil, bundle: nil)
+class ColourPalettePicturesViewController: BaseCanvasController {
+    override init() {
+        super.init()
         title = "Colour Palette from Pictures"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ShapeLayer.disableActions = true
     }
     
     override func setup() {

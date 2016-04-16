@@ -9,7 +9,7 @@
 import UIKit
 import C4
 
-class ColourPaletteInterpolationViewController: CanvasController {
+class ColourPaletteInterpolationViewController: BaseCanvasController {
     var grid = [Rectangle]()
     var point = Point(0, 0)
 
@@ -21,18 +21,13 @@ class ColourPaletteInterpolationViewController: CanvasController {
     
     let segmentedControl = UISegmentedControl(items: ["HSB", "RGB"])
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         title = "Colour Palette by Interpolation"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ShapeLayer.disableActions = true
     }
     
     override func viewWillAppear(animated: Bool) {

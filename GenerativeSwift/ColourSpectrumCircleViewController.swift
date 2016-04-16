@@ -9,25 +9,20 @@
 import UIKit
 import C4
 
-class ColourSpectrumCircleViewController: CanvasController {
+class ColourSpectrumCircleViewController: BaseCanvasController {
     var circle = [Shape]()
     var point = Point(0, 0)
     
     let slider = UISlider()
     let segments = [6, 12, 24, 45, 360]
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         title = "Colour Spectrum in a Circle"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ShapeLayer.disableActions = true
     }
     
     override func viewWillAppear(animated: Bool) {

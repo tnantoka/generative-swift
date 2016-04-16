@@ -11,7 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
 
     let sections = [
-        "Colour"
+        "Colour",
+        "Form"
     ]
     let rows: [[UIViewController]] = [
         [
@@ -22,7 +23,15 @@ class TableViewController: UITableViewController {
             ColourPaletteInterpolationViewController(),
             //ColourPalettePicturesViewController(),
             ColourPaletteRulesViewController(),
-        ]
+            // Colour Palette by Rules 2
+            // Colour Palette by Rules 3
+            // Colour Palette by Rules 4
+        ],
+        [
+            HelloFormViewController(),
+            HelloFormViewController2(),
+            HelloFormViewController3(),
+        ],
     ]
     
     override func viewDidLoad() {

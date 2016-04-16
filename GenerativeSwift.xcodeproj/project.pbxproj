@@ -21,6 +21,10 @@
 		9BF8EC121CC20A4400901730 /* ColourPaletteInterpolationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */; };
 		9BF8EC141CC23C3E00901730 /* ColourPalettePicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC131CC23C3E00901730 /* ColourPalettePicturesViewController.swift */; };
 		9BF8EC161CC23F1A00901730 /* ColourPaletteRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC151CC23F1A00901730 /* ColourPaletteRulesViewController.swift */; };
+		9BF8EC181CC2629800901730 /* HelloFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC171CC2629800901730 /* HelloFormViewController.swift */; };
+		9BF8EC1A1CC26E5200901730 /* HelloFormViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */; };
+		9BF8EC1C1CC2736200901730 /* BaseCanvasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC1B1CC2736200901730 /* BaseCanvasController.swift */; };
+		9BF8EC1E1CC27D1C00901730 /* HelloFormViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPaletteInterpolationViewController.swift; sourceTree = "<group>"; };
 		9BF8EC131CC23C3E00901730 /* ColourPalettePicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPalettePicturesViewController.swift; sourceTree = "<group>"; };
 		9BF8EC151CC23F1A00901730 /* ColourPaletteRulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPaletteRulesViewController.swift; sourceTree = "<group>"; };
+		9BF8EC171CC2629800901730 /* HelloFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloFormViewController.swift; sourceTree = "<group>"; };
+		9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloFormViewController2.swift; sourceTree = "<group>"; };
+		9BF8EC1B1CC2736200901730 /* BaseCanvasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCanvasController.swift; sourceTree = "<group>"; };
+		9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloFormViewController3.swift; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,7 @@
 				9BF8EBF01CC1D23500901730 /* LaunchScreen.storyboard */,
 				9BF8EBF31CC1D23500901730 /* Info.plist */,
 				9BF8EC071CC1D3DE00901730 /* TableViewController.swift */,
+				9BF8EC1B1CC2736200901730 /* BaseCanvasController.swift */,
 				9BF8EC091CC1D5FF00901730 /* HelloColourViewController.swift */,
 				9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */,
 				9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */,
@@ -119,6 +128,9 @@
 				9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */,
 				9BF8EC131CC23C3E00901730 /* ColourPalettePicturesViewController.swift */,
 				9BF8EC151CC23F1A00901730 /* ColourPaletteRulesViewController.swift */,
+				9BF8EC171CC2629800901730 /* HelloFormViewController.swift */,
+				9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */,
+				9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */,
 			);
 			path = GenerativeSwift;
 			sourceTree = "<group>";
@@ -294,10 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF8EC0A1CC1D5FF00901730 /* HelloColourViewController.swift in Sources */,
+				9BF8EC181CC2629800901730 /* HelloFormViewController.swift in Sources */,
+				9BF8EC1A1CC26E5200901730 /* HelloFormViewController2.swift in Sources */,
 				9BF8EC161CC23F1A00901730 /* ColourPaletteRulesViewController.swift in Sources */,
 				9BF8EC0E1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift in Sources */,
 				9BF8EBE81CC1D23500901730 /* AppDelegate.swift in Sources */,
+				9BF8EC1E1CC27D1C00901730 /* HelloFormViewController3.swift in Sources */,
 				9BF8EC081CC1D3DE00901730 /* TableViewController.swift in Sources */,
+				9BF8EC1C1CC2736200901730 /* BaseCanvasController.swift in Sources */,
 				9BF8EC101CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */,
 				9BF8EC141CC23C3E00901730 /* ColourPalettePicturesViewController.swift in Sources */,
 				9BF8EC0C1CC1E88D00901730 /* ColourSpectrumViewController.swift in Sources */,
