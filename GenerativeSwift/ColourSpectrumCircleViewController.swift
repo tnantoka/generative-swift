@@ -10,10 +10,10 @@ import UIKit
 import C4
 
 class ColourSpectrumCircleViewController: CanvasController {
-    var circle = [Triangle]()
-    let slider = UISlider()
+    var circle = [Shape]()
     var point = Point(0, 0)
     
+    let slider = UISlider()
     let segments = [6, 12, 24, 45, 360]
     
     init() {
@@ -55,10 +55,10 @@ class ColourSpectrumCircleViewController: CanvasController {
     }
     
     func updateCircle() {
-        for triangle in circle {
-            triangle.removeFromSuperview()
+        for shape in circle {
+            shape.removeFromSuperview()
         }
-        circle = [Triangle]()
+        circle = [Shape]()
 
         let segmentCount = segments[Int(slider.value)]
         let angleStep = 360.0 / Double(segmentCount)
@@ -68,27 +68,32 @@ class ColourSpectrumCircleViewController: CanvasController {
         var start = 0.0
         angleStep.stride(through: 360.0, by: angleStep).forEach { angle in
             let end = degToRad(angle)
-            
-            let point1 = Point(
-                canvas.center.x + cos(start) * radius,
-                canvas.center.y + sin(start) * radius
-            )
-            let point2 = Point(
-                canvas.center.x + cos(end) * radius,
-                canvas.center.y + sin(end) * radius
-            )
 
-            let triangle = Triangle([canvas.center, point1, point2])
-            triangle.strokeColor = nil
+            let shape = createShape(radius, start: start, end: end)
+            shape.strokeColor = nil
             let hue = angle / 360
             let saturation = point.x / canvas.width
             let brightness = point.y / canvas.height
-            triangle.fillColor = Color(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
-            
+            shape.fillColor = Color(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
+
             start = end
-            canvas.add(triangle)
-            circle.append(triangle)
+            canvas.add(shape)
+            circle.append(shape)
         }
+    }
+    
+    func createShape(radius: Double, start: Double, end: Double) -> Shape {
+        let point1 = Point(
+            canvas.center.x + cos(start) * radius,
+            canvas.center.y + sin(start) * radius
+        )
+        let point2 = Point(
+            canvas.center.x + cos(end) * radius,
+            canvas.center.y + sin(end) * radius
+        )
+        
+        let triangle = Triangle([canvas.center, point1, point2])
+        return triangle
     }
     
     func sliderChanged(sender: AnyObject) {

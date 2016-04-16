@@ -18,7 +18,7 @@ class TableViewController: UITableViewController {
             HelloColourViewController(),
             ColourSpectrumViewController(),
             ColourSpectrumCircleViewController(),
-            ColourSpectrumCircle2ViewController(),
+            ColourSpectrumCircleViewController2(),
         ]
     ]
     
