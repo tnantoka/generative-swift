@@ -15,7 +15,8 @@ class TableViewController: UITableViewController {
     ]
     let rows: [[UIViewController]] = [
         [
-            HelloColourViewController()
+            HelloColourViewController(),
+            ColourSpectrumViewController(),
         ]
     ]
     
