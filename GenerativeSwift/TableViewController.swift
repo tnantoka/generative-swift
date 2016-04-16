@@ -19,7 +19,9 @@ class TableViewController: UITableViewController {
             ColourSpectrumViewController(),
             ColourSpectrumCircleViewController(),
             ColourSpectrumCircleViewController2(),
-            ColourPaletteInterpolationViewController()
+            ColourPaletteInterpolationViewController(),
+            //ColourPalettePicturesViewController(),
+            ColourPaletteRulesViewController(),
         ]
     ]
     

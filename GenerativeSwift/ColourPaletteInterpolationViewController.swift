@@ -23,7 +23,7 @@ class ColourPaletteInterpolationViewController: CanvasController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        title = "Colour palette by interpolation"
+        title = "Colour Palette by Interpolation"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -109,7 +109,7 @@ class ColourPaletteInterpolationViewController: CanvasController {
         (0..<maxTileCountY).forEach { _ in
             colorsLeft.append(
                 Color(
-                    hue: Double(random(min: 0, max: 60)) /  360.0,
+                    hue: Double(random(min: 0, max: 60)) / 360.0,
                     saturation: Double(random(min: 0, max: 100)) / 100.0,
                     brightness: 1.0,
                     alpha: 1.0

@@ -53,7 +53,7 @@ class ColourSpectrumCircleViewController: CanvasController {
             self.point = center
             self.updateCircle()
         }
-        point = canvas.center
+        point = Point(canvas.center.x * 1.5, canvas.center.y * 1.5)
         updateCircle()
     }
     
