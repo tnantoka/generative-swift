@@ -34,6 +34,8 @@ class HelloColourViewController: CanvasController {
     }
     
     func updateRectangle(point: Point) {
+        ShapeLayer.disableActions = true
+
         rectangle.frame.width = point.x
         rectangle.frame.height = point.x * canvas.height / canvas.width
         rectangle.center = canvas.center

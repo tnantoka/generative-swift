@@ -33,6 +33,8 @@ class ColourSpectrumViewController: CanvasController {
     }
     
     func updateGrid(point: Point) {
+        ShapeLayer.disableActions = true
+        
         for rectangle in grid {
             rectangle.removeFromSuperview()
         }
