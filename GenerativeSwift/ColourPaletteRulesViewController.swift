@@ -74,7 +74,7 @@ class ColourPaletteRulesViewController: BaseCanvasController {
             (0..<tileCountX).forEach { gridX in
                 let x = Double(gridX) * tileWidth
                 let y = Double(gridY) * tileHeight
-                let index = counter % Int(Double(tileCountX) * 0.8)
+                let index = counter % Int(Double(tileCountX) * 0.8) // FIXME
                 
                 let rectangle = Rectangle(frame: Rect(x, y, tileWidth, tileHeight))
                 rectangle.strokeColor = nil

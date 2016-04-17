@@ -36,7 +36,7 @@ class HelloFormViewController: BaseCanvasController {
             self.point = center
             self.updateCircle()
         }
-        self.point = Point(canvas.center.x, canvas.center.y * 0.4)
+        point = Point(canvas.center.x, canvas.center.y * 0.4)
     }
     
     func updateCircle() {

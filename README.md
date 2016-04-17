@@ -18,6 +18,8 @@ WIP
 <img src="/readme/form/hello_2.jpg" width="20%">
 <img src="/readme/form/hello_3.jpg" width="20%">
 
+<img src="/readme/form/alignment_grid.png" width="20%">
+
 ## Acknowledgements
 
 - http://www.generative-gestaltung.de/

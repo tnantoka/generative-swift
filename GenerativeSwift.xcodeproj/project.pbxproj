@@ -25,6 +25,7 @@
 		9BF8EC1A1CC26E5200901730 /* HelloFormViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */; };
 		9BF8EC1C1CC2736200901730 /* BaseCanvasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC1B1CC2736200901730 /* BaseCanvasController.swift */; };
 		9BF8EC1E1CC27D1C00901730 /* HelloFormViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */; };
+		9BF8EC231CC31E6D00901730 /* AlignmentGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC221CC31E6D00901730 /* AlignmentGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloFormViewController2.swift; sourceTree = "<group>"; };
 		9BF8EC1B1CC2736200901730 /* BaseCanvasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCanvasController.swift; sourceTree = "<group>"; };
 		9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloFormViewController3.swift; sourceTree = "<group>"; };
+		9BF8EC221CC31E6D00901730 /* AlignmentGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentGridViewController.swift; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,16 +123,8 @@
 				9BF8EBF31CC1D23500901730 /* Info.plist */,
 				9BF8EC071CC1D3DE00901730 /* TableViewController.swift */,
 				9BF8EC1B1CC2736200901730 /* BaseCanvasController.swift */,
-				9BF8EC091CC1D5FF00901730 /* HelloColourViewController.swift */,
-				9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */,
-				9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */,
-				9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */,
-				9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */,
-				9BF8EC131CC23C3E00901730 /* ColourPalettePicturesViewController.swift */,
-				9BF8EC151CC23F1A00901730 /* ColourPaletteRulesViewController.swift */,
-				9BF8EC171CC2629800901730 /* HelloFormViewController.swift */,
-				9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */,
-				9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */,
+				9BF8EC1F1CC31E4500901730 /* Colour */,
+				9BF8EC201CC31E5400901730 /* Form */,
 			);
 			path = GenerativeSwift;
 			sourceTree = "<group>";
@@ -142,6 +136,39 @@
 				9BF8EBFE1CC1D23500901730 /* Info.plist */,
 			);
 			path = GenerativeSwiftTests;
+			sourceTree = "<group>";
+		};
+		9BF8EC1F1CC31E4500901730 /* Colour */ = {
+			isa = PBXGroup;
+			children = (
+				9BF8EC091CC1D5FF00901730 /* HelloColourViewController.swift */,
+				9BF8EC0B1CC1E88D00901730 /* ColourSpectrumViewController.swift */,
+				9BF8EC0D1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift */,
+				9BF8EC0F1CC2044C00901730 /* ColourSpectrumCircle2ViewController.swift */,
+				9BF8EC111CC20A4400901730 /* ColourPaletteInterpolationViewController.swift */,
+				9BF8EC131CC23C3E00901730 /* ColourPalettePicturesViewController.swift */,
+				9BF8EC151CC23F1A00901730 /* ColourPaletteRulesViewController.swift */,
+			);
+			name = Colour;
+			sourceTree = "<group>";
+		};
+		9BF8EC201CC31E5400901730 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				9BF8EC171CC2629800901730 /* HelloFormViewController.swift */,
+				9BF8EC191CC26E5200901730 /* HelloFormViewController2.swift */,
+				9BF8EC1D1CC27D1C00901730 /* HelloFormViewController3.swift */,
+				9BF8EC211CC31E5C00901730 /* Grid */,
+			);
+			name = Form;
+			sourceTree = "<group>";
+		};
+		9BF8EC211CC31E5C00901730 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				9BF8EC221CC31E6D00901730 /* AlignmentGridViewController.swift */,
+			);
+			name = Grid;
 			sourceTree = "<group>";
 		};
 		B2F84368175EFF00F54F40F2 /* Pods */ = {
@@ -311,6 +338,7 @@
 				9BF8EC161CC23F1A00901730 /* ColourPaletteRulesViewController.swift in Sources */,
 				9BF8EC0E1CC1F29E00901730 /* ColourSpectrumCircleViewController.swift in Sources */,
 				9BF8EBE81CC1D23500901730 /* AppDelegate.swift in Sources */,
+				9BF8EC231CC31E6D00901730 /* AlignmentGridViewController.swift in Sources */,
 				9BF8EC1E1CC27D1C00901730 /* HelloFormViewController3.swift in Sources */,
 				9BF8EC081CC1D3DE00901730 /* TableViewController.swift in Sources */,
 				9BF8EC1C1CC2736200901730 /* BaseCanvasController.swift in Sources */,

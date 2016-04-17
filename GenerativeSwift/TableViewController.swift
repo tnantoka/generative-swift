@@ -21,16 +21,17 @@ class TableViewController: UITableViewController {
             ColourSpectrumCircleViewController(),
             ColourSpectrumCircleViewController2(),
             ColourPaletteInterpolationViewController(),
-            //ColourPalettePicturesViewController(),
+            // ColourPalettePicturesViewController(), // TODO
             ColourPaletteRulesViewController(),
-            // Colour Palette by Rules 2
-            // Colour Palette by Rules 3
-            // Colour Palette by Rules 4
+            // Colour Palette by Rules 2 // TODO
+            // Colour Palette by Rules 3 // TODO
+            // Colour Palette by Rules 4 // TODO
         ],
         [
             HelloFormViewController(),
             HelloFormViewController2(),
             HelloFormViewController3(),
+            AlignmentGridViewController()
         ],
     ]
     
