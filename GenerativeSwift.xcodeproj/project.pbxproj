@@ -205,8 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				9BF8EC2F1CC348FF00901730 /* HelloFormViewController.swift */,
-				9BF8EC311CC348FF00901730 /* HelloFormViewController3.swift */,
 				9BF8EC301CC348FF00901730 /* HelloFormViewController2.swift */,
+				9BF8EC311CC348FF00901730 /* HelloFormViewController3.swift */,
 				9BF8EC421CC3492200901730 /* Grid */,
 			);
 			name = Form;
