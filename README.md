@@ -16,7 +16,7 @@ $ open GenerativeSwift.xcworkspace
 <img src="/readme/colour/ColourSpectrumCircle.png" width="20%">
 <img src="/readme/colour/ColourSpectrumCircle2.png" width="20%">
 
-<img src="/readme/colour/ColourPaletteInterpolation" width="20%">
+<img src="/readme/colour/ColourPaletteInterpolation.png" width="20%">
 <img src="/readme/colour/ColourPaletteRules.png" width="20%">
 
 ## Form

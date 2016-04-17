@@ -36,6 +36,7 @@
 		9BF8EC541CC34AE700901730 /* HelloForm.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC4A1CC34AE700901730 /* HelloForm.png */; };
 		9BF8EC551CC34AE700901730 /* HelloForm2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC4B1CC34AE700901730 /* HelloForm2.png */; };
 		9BF8EC561CC34AE700901730 /* HelloForm3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC4C1CC34AE700901730 /* HelloForm3.png */; };
+		9BF8EC581CC36FAB00901730 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC571CC36FAB00901730 /* Acknowledgements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		9BF8EC4A1CC34AE700901730 /* HelloForm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloForm.png; sourceTree = "<group>"; };
 		9BF8EC4B1CC34AE700901730 /* HelloForm2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloForm2.png; sourceTree = "<group>"; };
 		9BF8EC4C1CC34AE700901730 /* HelloForm3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloForm3.png; sourceTree = "<group>"; };
+		9BF8EC571CC36FAB00901730 /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 				9BF8EBEE1CC1D23500901730 /* Assets.xcassets */,
 				9BF8EBF01CC1D23500901730 /* LaunchScreen.storyboard */,
 				9BF8EBF31CC1D23500901730 /* Info.plist */,
+				9BF8EC571CC36FAB00901730 /* Acknowledgements.plist */,
 			);
 			path = GenerativeSwift;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF8EC561CC34AE700901730 /* HelloForm3.png in Resources */,
+				9BF8EC581CC36FAB00901730 /* Acknowledgements.plist in Resources */,
 				9BF8EBF21CC1D23500901730 /* LaunchScreen.storyboard in Resources */,
 				9BF8EC501CC34AE700901730 /* ColourSpectrum.png in Resources */,
 				9BF8EC4D1CC34AE700901730 /* AlignmentGrid.png in Resources */,

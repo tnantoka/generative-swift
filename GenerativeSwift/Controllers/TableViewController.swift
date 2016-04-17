@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RFAboutView_Swift
 
 class TableViewController: UITableViewController {
 
@@ -46,6 +47,11 @@ class TableViewController: UITableViewController {
         
         title = "Generative Swift"
         tableView.rowHeight = 88.0
+        
+        let infoButton = UIButton(type: .InfoLight)
+        infoButton.addTarget(self, action: #selector(infoTapped), forControlEvents: .TouchUpInside)
+        let infoItem = UIBarButtonItem(customView: infoButton)
+        navigationItem.leftBarButtonItem = infoItem
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -135,4 +141,26 @@ class TableViewController: UITableViewController {
     }
     */
 
+    func infoTapped(sender: AnyObject) {
+        let aboutController = RFAboutViewController(
+            appName: nil,
+            appVersion: nil,
+            appBuild: nil,
+            copyrightHolderName: "tnantoka",
+            contactEmail: nil,
+            contactEmailTitle: nil,
+            websiteURL: NSURL(string: "https://github.com/tnantoka/generative-swift"),
+            websiteURLTitle: nil,
+            pubYear: "2016")
+        
+        let navController = UINavigationController(rootViewController: aboutController)
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneTapped))
+        navController.navigationItem.leftBarButtonItem = doneItem
+
+        presentViewController(navController, animated: true, completion: nil)
+    }
+    
+    func doneTapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
