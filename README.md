@@ -2,6 +2,13 @@
 
 WIP
 
+```
+$ git clone git@github.com:tnantoka/generative-swift.git
+$ cd generative-swift
+$ pod install
+$ open GenerativeSwift.xcworkspace
+```
+
 ## Colour
 
 <img src="/readme/colour/hello.png" width="20%">
@@ -23,4 +30,8 @@ WIP
 ## Acknowledgements
 
 - http://www.generative-gestaltung.de/
+
+## Author
+
+[@tnantoka](https://twitter.com/tnantoka)
 

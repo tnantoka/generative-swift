@@ -24,6 +24,10 @@ class BaseCanvasController: CanvasController {
 
         // Do any additional setup after loading the view.
         ShapeLayer.disableActions = true
+        
+        let trash = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: #selector(trashTapped))
+        let action = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: #selector(actionTapped))
+        navigationItem.rightBarButtonItems = [trash, action]
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,14 +35,27 @@ class BaseCanvasController: CanvasController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func trashTapped(sender: AnyObject) {
+        for v in canvas.view.subviews {
+            v.removeFromSuperview()
+        }
     }
-    */
-
+    
+    func actionTapped(sender: AnyObject) {
+        let size = CGSize(width: canvas.width, height: canvas.height)
+        
+        let opaque = true
+        let scale: CGFloat = 0.0
+        UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
+        
+        let context = UIGraphicsGetCurrentContext()!
+        view.layer.renderInContext(context)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.presentViewController(activityController, animated: true, completion: nil)
+    }
 }
