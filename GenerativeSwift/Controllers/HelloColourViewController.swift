@@ -9,21 +9,16 @@
 import UIKit
 import C4
 
-class HelloColourViewController: CanvasController {
+class HelloColourViewController: BaseCanvasController {
     let rectangle = Rectangle(frame: Rect(0, 0, 0, 0))
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         title = "Hello Colour"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ShapeLayer.disableActions = true        
     }
     
     override func setup() {

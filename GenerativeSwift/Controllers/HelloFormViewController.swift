@@ -16,6 +16,7 @@ class HelloFormViewController: BaseCanvasController {
     override init() {
         super.init()
         title = "Hello Form"
+        trash = true
     }
     
     required init?(coder aDecoder: NSCoder) {

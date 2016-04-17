@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
         "Colour",
         "Form"
     ]
-    let rows: [[UIViewController]] = [
+    let rows: [[BaseCanvasController]] = [
         [
             HelloColourViewController(),
             ColourSpectrumViewController(),
@@ -45,6 +45,7 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         title = "Generative Swift"
+        tableView.rowHeight = 88.0
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -75,7 +76,8 @@ class TableViewController: UITableViewController {
         // Configure the cell...
         let row = rows[indexPath.section][indexPath.row]
         cell.textLabel?.text = row.title
-
+        cell.imageView?.image = row.thumbnail
+        
         return cell
     }
 

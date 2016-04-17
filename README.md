@@ -11,21 +11,21 @@ $ open GenerativeSwift.xcworkspace
 
 ## Colour
 
-<img src="/readme/colour/hello.png" width="20%">
-<img src="/readme/colour/spectrum.png" width="20%">
-<img src="/readme/colour/spectrum_circle.png" width="20%">
-<img src="/readme/colour/spectrum_circle_2.png" width="20%">
+<img src="/readme/colour/HelloColour.png" width="20%">
+<img src="/readme/colour/ColourSpectrum.png" width="20%">
+<img src="/readme/colour/ColourSpectrumCircle.png" width="20%">
+<img src="/readme/colour/ColourSpectrumCircle2.png" width="20%">
 
-<img src="/readme/colour/palette_interpolation.png" width="20%">
-<img src="/readme/colour/palette_rules.png" width="20%">
+<img src="/readme/colour/ColourPaletteInterpolation" width="20%">
+<img src="/readme/colour/ColourPaletteRules.png" width="20%">
 
 ## Form
 
-<img src="/readme/form/hello.jpg" width="20%">
-<img src="/readme/form/hello_2.jpg" width="20%">
-<img src="/readme/form/hello_3.jpg" width="20%">
+<img src="/readme/form/HelloForm.jpg" width="20%">
+<img src="/readme/form/HelloForm2.jpg" width="20%">
+<img src="/readme/form/HelloForm3.jpg" width="20%">
 
-<img src="/readme/form/alignment_grid.png" width="20%">
+<img src="/readme/form/AlignmentGrid.png" width="20%">
 
 ## Acknowledgements
 

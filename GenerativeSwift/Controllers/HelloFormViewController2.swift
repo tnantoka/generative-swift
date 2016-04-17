@@ -18,6 +18,7 @@ class HelloFormViewController2: HelloFormViewController {
     override init() {
         super.init()
         title = "Hello Form 2"
+        trash = true
     }
     
     required init?(coder aDecoder: NSCoder) {
