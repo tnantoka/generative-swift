@@ -15,7 +15,7 @@ class BaseCanvasController: CanvasController {
     var trash = false
     
     lazy var thumbnail: UIImage? = {
-        return UIImage(named: self.name)
+        return UIImage(named: self.name) ?? UIImage(named: "\(self.name).jpg")
     }()
     
     lazy var name: String = {
@@ -64,7 +64,7 @@ class BaseCanvasController: CanvasController {
     
     func actionTapped(sender: AnyObject) {
         let alertController = UIAlertController(title: "Actions", message: nil, preferredStyle: .ActionSheet)
-        alertController.addAction(UIAlertAction(title: "Save as Image", style: .Default) { _ in self.save() })
+        alertController.addAction(UIAlertAction(title: "Save as an Image", style: .Default) { _ in self.save() })
         alertController.addAction(UIAlertAction(title: "Source Code", style: .Default) { _ in self.github() })
         alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)

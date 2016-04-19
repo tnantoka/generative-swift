@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import C4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UINavigationBar.appearance().tintColor = UIColor(CGColor: C4Pink.CGColor)
+        UIToolbar.appearance().tintColor = UIColor(CGColor: C4Pink.CGColor)
+        
         return true
     }
 

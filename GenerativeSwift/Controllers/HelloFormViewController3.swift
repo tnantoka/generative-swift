@@ -45,7 +45,7 @@ class HelloFormViewController3: HelloFormViewController2 {
         segmentedControl.selectedSegmentIndex = 0
         let item = UIBarButtonItem(customView: segmentedControl)
         let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        toolbarItems = [flexible, autoItem, flexible, item, flexible]
+        toolbarItems = [flexible, autoItem, flexible, circleItem, flexible, item, flexible]
     }
     
     override func nextX(x: Double) -> Double {

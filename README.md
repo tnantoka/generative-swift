@@ -26,10 +26,13 @@ $ open GenerativeSwift.xcworkspace
 <img src="/readme/form/HelloForm3.jpg" width="20%">
 
 <img src="/readme/form/AlignmentGrid.png" width="20%">
+<img src="/readme/form/MovementGrid.jpg" width="20%">
+<img src="/readme/form/MovementGrid2.jpg" width="20%">
 
 ## Acknowledgements
 
 - http://www.generative-gestaltung.de/
+- http://c4ios.com/
 
 ## Author
 

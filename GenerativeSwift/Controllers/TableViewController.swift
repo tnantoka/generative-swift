@@ -32,7 +32,14 @@ class TableViewController: UITableViewController {
             HelloFormViewController(),
             HelloFormViewController2(),
             HelloFormViewController3(),
-            AlignmentGridViewController()
+            AlignmentGridViewController(),
+            // AlignmentGridViewController2(), // TODO
+            // AlignmentGridViewController3(), // TODO
+            // AlignmentGridViewController4(), // TODO
+            MovementGridViewController(),
+            MovementGridViewController2(),
+            // MovementGridViewController3(), // TODO
+            // MovementGridViewController4(), // TODO
         ],
     ]
     
@@ -57,6 +64,7 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(true, animated: true)
+        navigationController?.interactivePopGestureRecognizer?.enabled = true
     }
 
     override func didReceiveMemoryWarning() {

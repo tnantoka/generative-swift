@@ -12,6 +12,7 @@ import C4
 class AlignmentGridViewController: BaseCanvasController {
     var form = [Shape]()
     var point = Point(0, 0)
+    var randomSeed = UInt32(time(nil))
     
     let tileCountX = 10
     
@@ -27,7 +28,7 @@ class AlignmentGridViewController: BaseCanvasController {
             fatalError()
         }
     }
-    
+
     let segmentedControl = UISegmentedControl(items: ["1", "2", "3"])
 
     override init() {
@@ -57,7 +58,7 @@ class AlignmentGridViewController: BaseCanvasController {
             self.updateForm()
         }
         canvas.addTapGestureRecognizer { locations, center, state in
-            srand(UInt32(time(nil)))
+            self.randomSeed = UInt32(time(nil))
             self.updateForm()
         }
         point = canvas.center
@@ -65,6 +66,8 @@ class AlignmentGridViewController: BaseCanvasController {
     }
     
     func updateForm() {
+        srand(randomSeed)
+
         for shape in form {
             shape.removeFromSuperview()
         }
