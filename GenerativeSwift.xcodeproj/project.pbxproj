@@ -41,6 +41,8 @@
 		9BF8EC661CC67C3C00901730 /* HelloForm3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC631CC67C3C00901730 /* HelloForm3.jpg */; };
 		9BF8EC691CC67CFB00901730 /* MovementGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC671CC67CFB00901730 /* MovementGrid.jpg */; };
 		9BF8EC6A1CC67CFB00901730 /* MovementGrid2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC681CC67CFB00901730 /* MovementGrid2.jpg */; };
+		9BF8EC6C1CC7D57400901730 /* ComplexModulesGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC6B1CC7D57400901730 /* ComplexModulesGridViewController.swift */; };
+		9BF8EC6E1CC9172E00901730 /* ComplexModulesGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		9BF8EC631CC67C3C00901730 /* HelloForm3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HelloForm3.jpg; sourceTree = "<group>"; };
 		9BF8EC671CC67CFB00901730 /* MovementGrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MovementGrid.jpg; sourceTree = "<group>"; };
 		9BF8EC681CC67CFB00901730 /* MovementGrid2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MovementGrid2.jpg; sourceTree = "<group>"; };
+		9BF8EC6B1CC7D57400901730 /* ComplexModulesGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexModulesGridViewController.swift; sourceTree = "<group>"; };
+		9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ComplexModulesGrid.png; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +186,7 @@
 				9BF8EC631CC67C3C00901730 /* HelloForm3.jpg */,
 				9BF8EC671CC67CFB00901730 /* MovementGrid.jpg */,
 				9BF8EC681CC67CFB00901730 /* MovementGrid2.jpg */,
+				9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */,
 			);
 			path = Thumbnails;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				9BF8EC261CC348FF00901730 /* AlignmentGridViewController.swift */,
 				9BF8EC591CC4969000901730 /* MovementGridViewController.swift */,
 				9BF8EC5B1CC4C2D100901730 /* MovementGridViewController2.swift */,
+				9BF8EC6B1CC7D57400901730 /* ComplexModulesGridViewController.swift */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				9BF8EBF21CC1D23500901730 /* LaunchScreen.storyboard in Resources */,
 				9BF8EC6A1CC67CFB00901730 /* MovementGrid2.jpg in Resources */,
 				9BF8EC501CC34AE700901730 /* ColourSpectrum.png in Resources */,
+				9BF8EC6E1CC9172E00901730 /* ComplexModulesGrid.png in Resources */,
 				9BF8EC4D1CC34AE700901730 /* AlignmentGrid.png in Resources */,
 				9BF8EBEF1CC1D23500901730 /* Assets.xcassets in Resources */,
 				9BF8EC531CC34AE700901730 /* HelloColour.png in Resources */,
@@ -415,6 +422,7 @@
 				9BF8EBE81CC1D23500901730 /* AppDelegate.swift in Sources */,
 				9BF8EC391CC348FF00901730 /* ColourSpectrumCircleViewController.swift in Sources */,
 				9BF8EC3E1CC348FF00901730 /* HelloFormViewController3.swift in Sources */,
+				9BF8EC6C1CC7D57400901730 /* ComplexModulesGridViewController.swift in Sources */,
 				9BF8EC351CC348FF00901730 /* ColourPaletteInterpolationViewController.swift in Sources */,
 				9BF8EC5C1CC4C2D100901730 /* MovementGridViewController2.swift in Sources */,
 				9BF8EC371CC348FF00901730 /* ColourPaletteRulesViewController.swift in Sources */,

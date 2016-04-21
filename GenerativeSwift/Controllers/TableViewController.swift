@@ -40,6 +40,10 @@ class TableViewController: UITableViewController {
             MovementGridViewController2(),
             // MovementGridViewController3(), // TODO
             // MovementGridViewController4(), // TODO
+            ComplexModulesGridViewController(),
+            // ComplexModulesGridViewController2() // TODO,
+            // ComplexModulesGridViewController3() // TODO,
+            // ComplexModulesGridViewController4() // TODO,
         ],
     ]
     
