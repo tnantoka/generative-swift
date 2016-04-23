@@ -31,19 +31,23 @@ class ColourPaletteRulesViewController: BaseCanvasController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setToolbarHidden(false, animated: true)
-    }
-    
-    override func setup() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         segmentedControl.sizeToFit()
         segmentedControl.selectedSegmentIndex = 1
         segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), forControlEvents: .ValueChanged)
         let item = UIBarButtonItem(customView: segmentedControl)
         let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, item, flexible]
-        
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setToolbarHidden(false, animated: true)
+    }
+    
+    override func setup() {
         canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateGrid()

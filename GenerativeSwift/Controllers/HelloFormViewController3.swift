@@ -11,6 +11,7 @@ import C4
 
 class HelloFormViewController3: HelloFormViewController2 {
 
+    // FIXME
     override var strokeColor: Color {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -26,8 +27,8 @@ class HelloFormViewController3: HelloFormViewController2 {
         }
     }
     
-    let segmentedControl = UISegmentedControl(items: ["Gray", "Blue", "Pink", "Purple"])
-
+    let segmentedControl = UISegmentedControl(items: ["Gray", "Blue", "Pink", "Purple"]) // FIXME
+ 
     override init() {
         super.init()
         title = "Hello Form 3"

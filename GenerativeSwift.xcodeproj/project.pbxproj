@@ -43,6 +43,8 @@
 		9BF8EC6A1CC67CFB00901730 /* MovementGrid2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC681CC67CFB00901730 /* MovementGrid2.jpg */; };
 		9BF8EC6C1CC7D57400901730 /* ComplexModulesGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC6B1CC7D57400901730 /* ComplexModulesGridViewController.swift */; };
 		9BF8EC6E1CC9172E00901730 /* ComplexModulesGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */; };
+		9BF8EC701CC91D7900901730 /* StupidAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC6F1CC91D7900901730 /* StupidAgentViewController.swift */; };
+		9BF8EC731CCBAB6B00901730 /* StupidAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC721CCBAB6B00901730 /* StupidAgent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		9BF8EC681CC67CFB00901730 /* MovementGrid2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MovementGrid2.jpg; sourceTree = "<group>"; };
 		9BF8EC6B1CC7D57400901730 /* ComplexModulesGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexModulesGridViewController.swift; sourceTree = "<group>"; };
 		9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ComplexModulesGrid.png; sourceTree = "<group>"; };
+		9BF8EC6F1CC91D7900901730 /* StupidAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StupidAgentViewController.swift; sourceTree = "<group>"; };
+		9BF8EC721CCBAB6B00901730 /* StupidAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StupidAgent.png; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +191,7 @@
 				9BF8EC671CC67CFB00901730 /* MovementGrid.jpg */,
 				9BF8EC681CC67CFB00901730 /* MovementGrid2.jpg */,
 				9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */,
+				9BF8EC721CCBAB6B00901730 /* StupidAgent.png */,
 			);
 			path = Thumbnails;
 			sourceTree = "<group>";
@@ -207,9 +212,9 @@
 			children = (
 				9BF8EC2E1CC348FF00901730 /* HelloColourViewController.swift */,
 				9BF8EC2D1CC348FF00901730 /* ColourSpectrumViewController.swift */,
-				9BF8EC281CC348FF00901730 /* ColourPaletteInterpolationViewController.swift */,
 				9BF8EC2C1CC348FF00901730 /* ColourSpectrumCircleViewController.swift */,
 				9BF8EC2B1CC348FF00901730 /* ColourSpectrumCircle2ViewController.swift */,
+				9BF8EC281CC348FF00901730 /* ColourPaletteInterpolationViewController.swift */,
 				9BF8EC291CC348FF00901730 /* ColourPalettePicturesViewController.swift */,
 				9BF8EC2A1CC348FF00901730 /* ColourPaletteRulesViewController.swift */,
 			);
@@ -223,6 +228,7 @@
 				9BF8EC301CC348FF00901730 /* HelloFormViewController2.swift */,
 				9BF8EC311CC348FF00901730 /* HelloFormViewController3.swift */,
 				9BF8EC421CC3492200901730 /* Grid */,
+				9BF8EC711CC9222600901730 /* Agents */,
 			);
 			name = Form;
 			sourceTree = "<group>";
@@ -236,6 +242,14 @@
 				9BF8EC6B1CC7D57400901730 /* ComplexModulesGridViewController.swift */,
 			);
 			name = Grid;
+			sourceTree = "<group>";
+		};
+		9BF8EC711CC9222600901730 /* Agents */ = {
+			isa = PBXGroup;
+			children = (
+				9BF8EC6F1CC91D7900901730 /* StupidAgentViewController.swift */,
+			);
+			name = Agents;
 			sourceTree = "<group>";
 		};
 		B2F84368175EFF00F54F40F2 /* Pods */ = {
@@ -333,6 +347,7 @@
 			files = (
 				9BF8EC581CC36FAB00901730 /* Acknowledgements.plist in Resources */,
 				9BF8EBF21CC1D23500901730 /* LaunchScreen.storyboard in Resources */,
+				9BF8EC731CCBAB6B00901730 /* StupidAgent.png in Resources */,
 				9BF8EC6A1CC67CFB00901730 /* MovementGrid2.jpg in Resources */,
 				9BF8EC501CC34AE700901730 /* ColourSpectrum.png in Resources */,
 				9BF8EC6E1CC9172E00901730 /* ComplexModulesGrid.png in Resources */,
@@ -424,6 +439,7 @@
 				9BF8EC3E1CC348FF00901730 /* HelloFormViewController3.swift in Sources */,
 				9BF8EC6C1CC7D57400901730 /* ComplexModulesGridViewController.swift in Sources */,
 				9BF8EC351CC348FF00901730 /* ColourPaletteInterpolationViewController.swift in Sources */,
+				9BF8EC701CC91D7900901730 /* StupidAgentViewController.swift in Sources */,
 				9BF8EC5C1CC4C2D100901730 /* MovementGridViewController2.swift in Sources */,
 				9BF8EC371CC348FF00901730 /* ColourPaletteRulesViewController.swift in Sources */,
 				9BF8EC3A1CC348FF00901730 /* ColourSpectrumViewController.swift in Sources */,

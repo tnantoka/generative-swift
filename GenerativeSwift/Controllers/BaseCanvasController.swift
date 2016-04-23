@@ -10,7 +10,7 @@ import UIKit
 import C4
 import SafariServices
 
-class BaseCanvasController: CanvasController {
+class BaseCanvasController: UIViewController {
 
     var trash = false
     
@@ -39,8 +39,6 @@ class BaseCanvasController: CanvasController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        ShapeLayer.disableActions = true
-        
         let trashItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: #selector(trashTapped))
         let actionItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: #selector(actionTapped))
         var items = [actionItem]
@@ -49,7 +47,7 @@ class BaseCanvasController: CanvasController {
         }
         navigationItem.rightBarButtonItems = items
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -99,5 +97,23 @@ class BaseCanvasController: CanvasController {
         let safariController = SFSafariViewController(URL: url)
         safariController.title = title
         navigationController?.pushViewController(safariController, animated: true)
+    }
+    
+    // MARK: - C4.CanvasController
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        canvas.backgroundColor = C4Grey
+        ShapeLayer.disableActions = true
+        setup()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        clear()
+    }
+    
+    func setup() {
     }
 }

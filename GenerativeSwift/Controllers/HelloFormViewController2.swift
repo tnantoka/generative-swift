@@ -39,8 +39,12 @@ class HelloFormViewController2: HelloFormViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
         navigationController?.interactivePopGestureRecognizer?.enabled = false
+    }
+    
+    override func viewDidAppear(animated: Bool) {
     }
 
     override func createForm(circleResolution: Int, radius: Double, angle: Double) {

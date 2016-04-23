@@ -44,6 +44,8 @@ class TableViewController: UITableViewController {
             // ComplexModulesGridViewController2() // TODO,
             // ComplexModulesGridViewController3() // TODO,
             // ComplexModulesGridViewController4() // TODO,
+            // ComplexModulesGridViewController5() // TODO,
+            StupidAgentViewController(),
         ],
     ]
     

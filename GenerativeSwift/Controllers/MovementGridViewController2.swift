@@ -34,25 +34,29 @@ class MovementGridViewController2: MovementGridViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        segmentedControl.sizeToFit()
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), forControlEvents: .ValueChanged)
+        let item = UIBarButtonItem(customView: segmentedControl)
+        
+        let up = UIBarButtonItem(title: "↑", style: .Plain, target: self, action: #selector(upTapped))
+        let down = UIBarButtonItem(title: "↓", style: .Plain, target: self, action: #selector(downTapped))
+        let left = UIBarButtonItem(title: "←", style: .Plain, target: self, action: #selector(leftTapped))
+        let right = UIBarButtonItem(title: "→", style: .Plain, target: self, action: #selector(rightTapped))
+        
+        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        toolbarItems = [flexible, item, flexible, up, down, left, right, flexible]
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
     }
 
     override func setup() {
-        segmentedControl.sizeToFit()
-        segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), forControlEvents: .ValueChanged)
-        let item = UIBarButtonItem(customView: segmentedControl)
-
-        let up = UIBarButtonItem(title: "↑", style: .Plain, target: self, action: #selector(upTapped))
-        let down = UIBarButtonItem(title: "↓", style: .Plain, target: self, action: #selector(downTapped))
-        let left = UIBarButtonItem(title: "←", style: .Plain, target: self, action: #selector(leftTapped))
-        let right = UIBarButtonItem(title: "→", style: .Plain, target: self, action: #selector(rightTapped))
-
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        toolbarItems = [flexible, item, flexible, up, down, left, right, flexible]
-
         changeColor()
         super.setup()
     }

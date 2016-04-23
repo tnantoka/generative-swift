@@ -25,12 +25,9 @@ class ColourSpectrumCircleViewController: BaseCanvasController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setToolbarHidden(false, animated: true)
-    }
-    
-    override func setup() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         slider.frame = CGRectMake(0, 0, CGRectGetWidth(view.bounds) - 40, 34)
         slider.maximumValue = Float(segments.indices.last ?? 0)
         slider.minimumValue = 0
@@ -39,7 +36,14 @@ class ColourSpectrumCircleViewController: BaseCanvasController {
         let item = UIBarButtonItem(customView: slider)
         let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, item, flexible]
+    }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setToolbarHidden(false, animated: true)
+    }
+    
+    override func setup() {
         canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateCircle()
