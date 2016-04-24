@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import GenerativeSwift
+import C4
 
 class GenerativeSwiftTests: XCTestCase {
     
@@ -33,4 +34,16 @@ class GenerativeSwiftTests: XCTestCase {
         }
     }
     
+    func testContains() {
+        let line = Line(begin: Point(100, 100), end: Point(110, 110))
+        let p1 = Point(105, 105)
+        let p2 = Point(105, 104)
+        let p3 = Point(99, 99)
+        let p4 = Point(100, 105)
+        print(line.frame)
+        XCTAssertTrue(line.contains(p1))
+        XCTAssertTrue(line.contains(p2))
+        XCTAssertFalse(line.contains(p3))
+        XCTAssertFalse(line.contains(p4))
+    }
 }

@@ -31,6 +31,7 @@ $ open GenerativeSwift.xcworkspace
 <img src="/readme/form/ComplexModulesGrid.png" width="20%">
 
 <img src="/readme/form/StupidAgent.png" width="20%">
+<img src="/readme/form/IntelligentAgent.png" width="20%">
 
 ## Acknowledgements
 

@@ -9,50 +9,15 @@
 import UIKit
 import C4
 
-enum Direction: UInt32 {
-    case North
-    case NorthEast
-    case East
-    case SouthEast
-    case South
-    case SouthWest
-    case West
-    case NorthWest
-    
-    static var last: Direction {
-        return .NorthWest
-    }
-    
-    static func random() -> Direction {
-        return Direction(rawValue: arc4random() % (last.rawValue + 1))!
-    }
-}
-
-public class CirclePolygon: Polygon {
-    init(_ points: [Point], _ size: Size) {
-        super.init()
-        
-        let path = Path()
-        for point in points {
-            path.addEllipse(Rect(point, size))
-        }
-        self.path = path
-        
-        adjustToFitPath()
-    }
-    
-    required public init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
 class StupidAgentViewController: BaseCanvasController {
     var point = Point(0, 0)
     var x = 0.0
     var y = 0.0
     var timer: NSTimer?
     
-    let step = 1.0
+    var step: Double {
+        return 1.0
+    }
     let diameter = 1.0
     
     var startItem: UIBarButtonItem!
@@ -92,9 +57,7 @@ class StupidAgentViewController: BaseCanvasController {
         canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
         }
-        point = canvas.center
-        x = point.x
-        y = point.y
+        clear()
     }
 
     func draw() {
@@ -168,5 +131,7 @@ class StupidAgentViewController: BaseCanvasController {
     override func clear() {
         super.clear()
         point = canvas.center
+        x = point.x
+        y = point.y
     }
 }
