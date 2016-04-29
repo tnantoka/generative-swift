@@ -49,6 +49,7 @@ class TableViewController: UITableViewController {
             // StupidAgentViewController2(), // TODO
             IntelligentAgentViewController(),
             // IntelligentAgentViewController2(), // TODO
+            FormAgentViewController(),
         ],
     ]
     

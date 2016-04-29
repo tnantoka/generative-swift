@@ -50,6 +50,8 @@
 		9BF8EC7A1CCBB42D00901730 /* CirclePolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC791CCBB42D00901730 /* CirclePolygon.swift */; };
 		9BF8EC7C1CCC90B900901730 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC7B1CCC90B900901730 /* Line.swift */; };
 		9BF8EC7E1CCC98C000901730 /* IntelligentAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */; };
+		9BF8EC801CD25F6500901730 /* FormAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */; };
+		9BF8EC821CD3A34B00901730 /* FormAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC811CD3A34B00901730 /* FormAgent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		9BF8EC791CCBB42D00901730 /* CirclePolygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePolygon.swift; sourceTree = "<group>"; };
 		9BF8EC7B1CCC90B900901730 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntelligentAgent.png; sourceTree = "<group>"; };
+		9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormAgentViewController.swift; sourceTree = "<group>"; };
+		9BF8EC811CD3A34B00901730 /* FormAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FormAgent.png; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +208,7 @@
 				9BF8EC6D1CC9172E00901730 /* ComplexModulesGrid.png */,
 				9BF8EC721CCBAB6B00901730 /* StupidAgent.png */,
 				9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */,
+				9BF8EC811CD3A34B00901730 /* FormAgent.png */,
 			);
 			path = Thumbnails;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			children = (
 				9BF8EC6F1CC91D7900901730 /* StupidAgentViewController.swift */,
 				9BF8EC741CCBB2C500901730 /* IntelligentAgentViewController.swift */,
+				9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */,
 			);
 			name = Agents;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				9BF8EC531CC34AE700901730 /* HelloColour.png in Resources */,
 				9BF8EC661CC67C3C00901730 /* HelloForm3.jpg in Resources */,
 				9BF8EC691CC67CFB00901730 /* MovementGrid.jpg in Resources */,
+				9BF8EC821CD3A34B00901730 /* FormAgent.png in Resources */,
 				9BF8EC641CC67C3C00901730 /* HelloForm.jpg in Resources */,
 				9BF8EC521CC34AE700901730 /* ColourSpectrumCircle2.png in Resources */,
 				9BF8EC511CC34AE700901730 /* ColourSpectrumCircle.png in Resources */,
@@ -473,6 +480,7 @@
 				9BF8EC3A1CC348FF00901730 /* ColourSpectrumViewController.swift in Sources */,
 				9BF8EC381CC348FF00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */,
 				9BF8EC3D1CC348FF00901730 /* HelloFormViewController2.swift in Sources */,
+				9BF8EC801CD25F6500901730 /* FormAgentViewController.swift in Sources */,
 				9BF8EC361CC348FF00901730 /* ColourPalettePicturesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
