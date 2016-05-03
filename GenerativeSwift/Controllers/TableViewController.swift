@@ -55,7 +55,9 @@ class TableViewController: UITableViewController {
             // GrowthAgentViewController(), // TODO
             DensityAgentViewController(),
             // DensityAgentViewController2(), // TODO
-            DensityCircleAgentViewController(), 
+            DensityCircleAgentViewController(),
+            DrawingBrushViewController(),
+            // DrawingBrushViewController2(), // TODO
         ],
     ]
     

@@ -58,6 +58,8 @@
 		9BF8EC8B1CD854FB00901730 /* DensityAgent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC8A1CD854FB00901730 /* DensityAgent.jpg */; };
 		9BF8EC8D1CD85A3100901730 /* DensityCircleAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC8C1CD85A3100901730 /* DensityCircleAgentViewController.swift */; };
 		9BF8EC8F1CD86B6000901730 /* DensityCircleAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC8E1CD86B6000901730 /* DensityCircleAgent.png */; };
+		9BF8EC921CD8761D00901730 /* DrawingBrushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC911CD8761D00901730 /* DrawingBrushViewController.swift */; };
+		9BF8EC941CD8B8D300901730 /* DrawingBrush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC931CD8B8D300901730 /* DrawingBrush.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		9BF8EC8A1CD854FB00901730 /* DensityAgent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DensityAgent.jpg; sourceTree = "<group>"; };
 		9BF8EC8C1CD85A3100901730 /* DensityCircleAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DensityCircleAgentViewController.swift; sourceTree = "<group>"; };
 		9BF8EC8E1CD86B6000901730 /* DensityCircleAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DensityCircleAgent.png; sourceTree = "<group>"; };
+		9BF8EC911CD8761D00901730 /* DrawingBrushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBrushViewController.swift; sourceTree = "<group>"; };
+		9BF8EC931CD8B8D300901730 /* DrawingBrush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DrawingBrush.jpg; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +228,7 @@
 				9BF8EC861CD838F400901730 /* GrowthAgent.png */,
 				9BF8EC8A1CD854FB00901730 /* DensityAgent.jpg */,
 				9BF8EC8E1CD86B6000901730 /* DensityCircleAgent.png */,
+				9BF8EC931CD8B8D300901730 /* DrawingBrush.jpg */,
 			);
 			path = Thumbnails;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				9BF8EC311CC348FF00901730 /* HelloFormViewController3.swift */,
 				9BF8EC421CC3492200901730 /* Grid */,
 				9BF8EC711CC9222600901730 /* Agents */,
+				9BF8EC901CD875B600901730 /* Drawing */,
 			);
 			name = Form;
 			sourceTree = "<group>";
@@ -297,6 +303,14 @@
 				9BF8EC7B1CCC90B900901730 /* Line.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9BF8EC901CD875B600901730 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				9BF8EC911CD8761D00901730 /* DrawingBrushViewController.swift */,
+			);
+			name = Drawing;
 			sourceTree = "<group>";
 		};
 		B2F84368175EFF00F54F40F2 /* Pods */ = {
@@ -399,6 +413,7 @@
 				9BF8EC871CD838F500901730 /* GrowthAgent.png in Resources */,
 				9BF8EC501CC34AE700901730 /* ColourSpectrum.png in Resources */,
 				9BF8EC6E1CC9172E00901730 /* ComplexModulesGrid.png in Resources */,
+				9BF8EC941CD8B8D300901730 /* DrawingBrush.jpg in Resources */,
 				9BF8EC4D1CC34AE700901730 /* AlignmentGrid.png in Resources */,
 				9BF8EBEF1CC1D23500901730 /* Assets.xcassets in Resources */,
 				9BF8EC531CC34AE700901730 /* HelloColour.png in Resources */,
@@ -483,6 +498,7 @@
 				9BF8EC331CC348FF00901730 /* AlignmentGridViewController.swift in Sources */,
 				9BF8EC3F1CC348FF00901730 /* TableViewController.swift in Sources */,
 				9BF8EC5A1CC4969000901730 /* MovementGridViewController.swift in Sources */,
+				9BF8EC921CD8761D00901730 /* DrawingBrushViewController.swift in Sources */,
 				9BF8EC851CD829D200901730 /* GrowthAgentViewController.swift in Sources */,
 				9BF8EC781CCBB40F00901730 /* Direction.swift in Sources */,
 				9BF8EC3B1CC348FF00901730 /* HelloColourViewController.swift in Sources */,
