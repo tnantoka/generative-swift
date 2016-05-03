@@ -53,6 +53,7 @@ class TableViewController: UITableViewController {
             // FormAgentViewController2(), // TODO
             GrowthAgentViewController(),
             // GrowthAgentViewController(), // TODO
+            DensityAgentViewController(),
         ],
     ]
     

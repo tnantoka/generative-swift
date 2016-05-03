@@ -28,7 +28,6 @@ class IntelligentAgentViewController: StupidAgentViewController {
     override init() {
         super.init()
         title = "Intelligent Agent"
-        trash = true
     }
     
     required init?(coder aDecoder: NSCoder) {

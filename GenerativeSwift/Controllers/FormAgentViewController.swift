@@ -21,7 +21,6 @@ class FormAgentViewController: StupidAgentViewController {
     override init() {
         super.init()
         title = "Forms Made by Agents"
-        trash = true
     }
     
     required init?(coder aDecoder: NSCoder) {

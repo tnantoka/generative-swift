@@ -54,6 +54,8 @@
 		9BF8EC821CD3A34B00901730 /* FormAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC811CD3A34B00901730 /* FormAgent.png */; };
 		9BF8EC851CD829D200901730 /* GrowthAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC841CD829D200901730 /* GrowthAgentViewController.swift */; };
 		9BF8EC871CD838F500901730 /* GrowthAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC861CD838F400901730 /* GrowthAgent.png */; };
+		9BF8EC891CD83C5500901730 /* DensityAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC881CD83C5500901730 /* DensityAgentViewController.swift */; };
+		9BF8EC8B1CD854FB00901730 /* DensityAgent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC8A1CD854FB00901730 /* DensityAgent.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		9BF8EC811CD3A34B00901730 /* FormAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FormAgent.png; sourceTree = "<group>"; };
 		9BF8EC841CD829D200901730 /* GrowthAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowthAgentViewController.swift; sourceTree = "<group>"; };
 		9BF8EC861CD838F400901730 /* GrowthAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrowthAgent.png; sourceTree = "<group>"; };
+		9BF8EC881CD83C5500901730 /* DensityAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Density\U001dAgentViewController.swift"; sourceTree = "<group>"; };
+		9BF8EC8A1CD854FB00901730 /* DensityAgent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DensityAgent.jpg; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +218,7 @@
 				9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */,
 				9BF8EC811CD3A34B00901730 /* FormAgent.png */,
 				9BF8EC861CD838F400901730 /* GrowthAgent.png */,
+				9BF8EC8A1CD854FB00901730 /* DensityAgent.jpg */,
 			);
 			path = Thumbnails;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				9BF8EC741CCBB2C500901730 /* IntelligentAgentViewController.swift */,
 				9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */,
 				9BF8EC841CD829D200901730 /* GrowthAgentViewController.swift */,
+				9BF8EC881CD83C5500901730 /* DensityAgentViewController.swift */,
 			);
 			name = Agents;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				9BF8EC691CC67CFB00901730 /* MovementGrid.jpg in Resources */,
 				9BF8EC821CD3A34B00901730 /* FormAgent.png in Resources */,
 				9BF8EC641CC67C3C00901730 /* HelloForm.jpg in Resources */,
+				9BF8EC8B1CD854FB00901730 /* DensityAgent.jpg in Resources */,
 				9BF8EC521CC34AE700901730 /* ColourSpectrumCircle2.png in Resources */,
 				9BF8EC511CC34AE700901730 /* ColourSpectrumCircle.png in Resources */,
 				9BF8EC651CC67C3C00901730 /* HelloForm2.jpg in Resources */,
@@ -486,6 +493,7 @@
 				9BF8EC5C1CC4C2D100901730 /* MovementGridViewController2.swift in Sources */,
 				9BF8EC371CC348FF00901730 /* ColourPaletteRulesViewController.swift in Sources */,
 				9BF8EC3A1CC348FF00901730 /* ColourSpectrumViewController.swift in Sources */,
+				9BF8EC891CD83C5500901730 /* DensityAgentViewController.swift in Sources */,
 				9BF8EC381CC348FF00901730 /* ColourSpectrumCircle2ViewController.swift in Sources */,
 				9BF8EC3D1CC348FF00901730 /* HelloFormViewController2.swift in Sources */,
 				9BF8EC801CD25F6500901730 /* FormAgentViewController.swift in Sources */,

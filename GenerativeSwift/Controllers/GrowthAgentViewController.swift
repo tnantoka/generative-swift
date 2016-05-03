@@ -21,10 +21,13 @@ class GrowthAgentViewController: StupidAgentViewController {
     var temps = [Shape]()
     var drawTemp = false
     
+    var initialRadius: Double {
+        return 10.0
+    }
+    
     override init() {
         super.init()
         title = "Growth Structures Made by Agents"
-        trash = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,13 +53,17 @@ class GrowthAgentViewController: StupidAgentViewController {
             addCircle(points[0], radius: radiuses[0])
         }
         
+        drawCircles()
+    }
+    
+    func drawCircles() {
         let r = Double(random(min: 1, max: 8))
         let intR = Int(r)
         let point = Point(
             Double(random(min: intR, max: Int(canvas.width) - intR)),
             Double(random(min: intR, max: Int(canvas.height) - intR))
         )
-
+        
         var closestDist = Double.infinity
         var closestIndex = 0
         for (i, p) in points.enumerate() {
@@ -86,17 +93,18 @@ class GrowthAgentViewController: StupidAgentViewController {
         )
         points.append(closestPoint)
         radiuses.append(r)
-        
         addCircle(closestPoint, radius: r)
     }
     
     func addCircle(center: Point, radius: Double) {
         let circle = Circle(center: center, radius: radius)
-        
+        configureCircle(circle)
+        canvas.add(circle)
+    }
+    
+    func configureCircle(circle: Circle) {
         circle.strokeColor = nil
         circle.fillColor = Color(UIColor(white: 50.0 / 255.0, alpha: 1.0))
-        
-        canvas.add(circle)
     }
     
     override func clear() {
@@ -106,7 +114,7 @@ class GrowthAgentViewController: StupidAgentViewController {
         radiuses = [Double]()
         
         let point = canvas.center
-        let r = 10.0
+        let r = initialRadius
         points.append(point)
         radiuses.append(r)
     }
