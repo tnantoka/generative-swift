@@ -52,6 +52,8 @@
 		9BF8EC7E1CCC98C000901730 /* IntelligentAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */; };
 		9BF8EC801CD25F6500901730 /* FormAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */; };
 		9BF8EC821CD3A34B00901730 /* FormAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC811CD3A34B00901730 /* FormAgent.png */; };
+		9BF8EC851CD829D200901730 /* GrowthAgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EC841CD829D200901730 /* GrowthAgentViewController.swift */; };
+		9BF8EC871CD838F500901730 /* GrowthAgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EC861CD838F400901730 /* GrowthAgent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntelligentAgent.png; sourceTree = "<group>"; };
 		9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormAgentViewController.swift; sourceTree = "<group>"; };
 		9BF8EC811CD3A34B00901730 /* FormAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FormAgent.png; sourceTree = "<group>"; };
+		9BF8EC841CD829D200901730 /* GrowthAgentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowthAgentViewController.swift; sourceTree = "<group>"; };
+		9BF8EC861CD838F400901730 /* GrowthAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrowthAgent.png; sourceTree = "<group>"; };
 		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +213,7 @@
 				9BF8EC721CCBAB6B00901730 /* StupidAgent.png */,
 				9BF8EC7D1CCC98C000901730 /* IntelligentAgent.png */,
 				9BF8EC811CD3A34B00901730 /* FormAgent.png */,
+				9BF8EC861CD838F400901730 /* GrowthAgent.png */,
 			);
 			path = Thumbnails;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				9BF8EC6F1CC91D7900901730 /* StupidAgentViewController.swift */,
 				9BF8EC741CCBB2C500901730 /* IntelligentAgentViewController.swift */,
 				9BF8EC7F1CD25F6500901730 /* FormAgentViewController.swift */,
+				9BF8EC841CD829D200901730 /* GrowthAgentViewController.swift */,
 			);
 			name = Agents;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				9BF8EBF21CC1D23500901730 /* LaunchScreen.storyboard in Resources */,
 				9BF8EC731CCBAB6B00901730 /* StupidAgent.png in Resources */,
 				9BF8EC6A1CC67CFB00901730 /* MovementGrid2.jpg in Resources */,
+				9BF8EC871CD838F500901730 /* GrowthAgent.png in Resources */,
 				9BF8EC501CC34AE700901730 /* ColourSpectrum.png in Resources */,
 				9BF8EC6E1CC9172E00901730 /* ComplexModulesGrid.png in Resources */,
 				9BF8EC4D1CC34AE700901730 /* AlignmentGrid.png in Resources */,
@@ -462,6 +469,7 @@
 				9BF8EC331CC348FF00901730 /* AlignmentGridViewController.swift in Sources */,
 				9BF8EC3F1CC348FF00901730 /* TableViewController.swift in Sources */,
 				9BF8EC5A1CC4969000901730 /* MovementGridViewController.swift in Sources */,
+				9BF8EC851CD829D200901730 /* GrowthAgentViewController.swift in Sources */,
 				9BF8EC781CCBB40F00901730 /* Direction.swift in Sources */,
 				9BF8EC3B1CC348FF00901730 /* HelloColourViewController.swift in Sources */,
 				9BF8EC341CC348FF00901730 /* BaseCanvasController.swift in Sources */,

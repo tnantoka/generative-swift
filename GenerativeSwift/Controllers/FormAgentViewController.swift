@@ -72,7 +72,6 @@ class FormAgentViewController: StupidAgentViewController {
     }
     
     func clearPoints() {
-        
         points = [Point]()
         center = point
         let angle = degToRad(360 / Double(formResolution))

@@ -50,6 +50,9 @@ class TableViewController: UITableViewController {
             IntelligentAgentViewController(),
             // IntelligentAgentViewController2(), // TODO
             FormAgentViewController(),
+            // FormAgentViewController2(), // TODO
+            GrowthAgentViewController(),
+            // GrowthAgentViewController(), // TODO
         ],
     ]
     
