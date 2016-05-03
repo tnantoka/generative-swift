@@ -80,8 +80,7 @@ class IntelligentAgentViewController: StupidAgentViewController {
         }
     }
     
-    override func clear() {
-        super.clear()
+    override func clearPoints() {
         point = canvas.center
         x = point.x
         y = point.y

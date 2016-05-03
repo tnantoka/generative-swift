@@ -11,8 +11,12 @@ import C4
 
 class DensityAgentViewController: GrowthAgentViewController {
     
-    let minRadius = 3.0
-    let maxRadius = 50.0
+    var minRadius: Double {
+        return 3.0
+    }
+    var maxRadius: Double {
+        return 50.0
+    }
     var mouseRect = 30.0
     
     var mousePressed = false
@@ -123,7 +127,6 @@ class DensityAgentViewController: GrowthAgentViewController {
         circle.strokeColor = Color(UIColor.blackColor())
         circle.fillColor = nil
     }
-    
     
     func upTapped(sender: AnyObject) {
         mouseRect += 4.0

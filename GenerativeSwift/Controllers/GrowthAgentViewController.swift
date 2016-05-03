@@ -107,9 +107,7 @@ class GrowthAgentViewController: StupidAgentViewController {
         circle.fillColor = Color(UIColor(white: 50.0 / 255.0, alpha: 1.0))
     }
     
-    override func clear() {
-        super.clear()
-
+    override func clearPoints() {
         points = [Point]()
         radiuses = [Double]()
         

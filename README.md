@@ -36,6 +36,7 @@ $ open GenerativeSwift.xcworkspace
 
 <img src="/readme/form/GrowthAgent.png" width="20%">
 <img src="/readme/form/DensityAgent.jpg" width="20%">
+<img src="/readme/form/DensityCircleAgent.png" width="20%">
 
 ## Acknowledgements
 

@@ -65,12 +65,7 @@ class FormAgentViewController: StupidAgentViewController {
         canvas.add(shape)
     }
     
-    override func clear() {
-        super.clear()
-        clearPoints()
-    }
-    
-    func clearPoints() {
+    override func clearPoints() {
         points = [Point]()
         center = point
         let angle = degToRad(360 / Double(formResolution))

@@ -130,6 +130,10 @@ class StupidAgentViewController: BaseCanvasController {
     
     override func clear() {
         super.clear()
+        clearPoints()
+    }
+    
+    func clearPoints() {
         point = canvas.center
         x = point.x
         y = point.y
