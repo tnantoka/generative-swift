@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49ECB566DB7D6D7F968323B8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A0108AB83889CB065C8544 /* Pods.framework */; };
+		27BA6A526C0A88FA4DE3BBAD /* Pods_GenerativeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7993C3B1493147898E241E9D /* Pods_GenerativeSwift.framework */; };
 		9BF8EBE81CC1D23500901730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8EBE71CC1D23500901730 /* AppDelegate.swift */; };
 		9BF8EBED1CC1D23500901730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EBEB1CC1D23500901730 /* Main.storyboard */; };
 		9BF8EBEF1CC1D23500901730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8EBEE1CC1D23500901730 /* Assets.xcassets */; };
@@ -73,8 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AEBE4A7DB127B0990454486 /* Pods-GenerativeSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenerativeSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenerativeSwift/Pods-GenerativeSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		47A0108AB83889CB065C8544 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5677B446356EAAFA84B2EA67 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7993C3B1493147898E241E9D /* Pods_GenerativeSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenerativeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF8EBE41CC1D23500901730 /* GenerativeSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenerativeSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF8EBE71CC1D23500901730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF8EBEC1CC1D23500901730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,7 +132,7 @@
 		9BF8EC8E1CD86B6000901730 /* DensityCircleAgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DensityCircleAgent.png; sourceTree = "<group>"; };
 		9BF8EC911CD8761D00901730 /* DrawingBrushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBrushViewController.swift; sourceTree = "<group>"; };
 		9BF8EC931CD8B8D300901730 /* DrawingBrush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DrawingBrush.jpg; sourceTree = "<group>"; };
-		F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A0A8A8B0ED1E1F5CA568E3 /* Pods-GenerativeSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenerativeSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenerativeSwift/Pods-GenerativeSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49ECB566DB7D6D7F968323B8 /* Pods.framework in Frameworks */,
+				27BA6A526C0A88FA4DE3BBAD /* Pods_GenerativeSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,10 +154,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AD43640E0C3872136B3DDB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AEBE4A7DB127B0990454486 /* Pods-GenerativeSwift.debug.xcconfig */,
+				D1A0A8A8B0ED1E1F5CA568E3 /* Pods-GenerativeSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B105AB81CA0EFD7692C7195 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				47A0108AB83889CB065C8544 /* Pods.framework */,
+				7993C3B1493147898E241E9D /* Pods_GenerativeSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,8 +178,8 @@
 				9BF8EBE61CC1D23500901730 /* GenerativeSwift */,
 				9BF8EBFB1CC1D23500901730 /* GenerativeSwiftTests */,
 				9BF8EBE51CC1D23500901730 /* Products */,
-				B2F84368175EFF00F54F40F2 /* Pods */,
 				7B105AB81CA0EFD7692C7195 /* Frameworks */,
+				1AD43640E0C3872136B3DDB0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,15 +324,6 @@
 			name = Drawing;
 			sourceTree = "<group>";
 		};
-		B2F84368175EFF00F54F40F2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */,
-				5677B446356EAAFA84B2EA67 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,12 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BF8EC011CC1D23500901730 /* Build configuration list for PBXNativeTarget "GenerativeSwift" */;
 			buildPhases = (
-				AC1B6AEB3E6FE584BDAE84BA /* Check Pods Manifest.lock */,
+				8780C2095541C47EAAD19B61 /* [CP] Check Pods Manifest.lock */,
 				9BF8EBE01CC1D23500901730 /* Sources */,
 				9BF8EBE11CC1D23500901730 /* Frameworks */,
 				9BF8EBE21CC1D23500901730 /* Resources */,
-				F6976CB34200E4DD199E96E5 /* Embed Pods Frameworks */,
-				A363510848B05ACB65EC4367 /* Copy Pods Resources */,
+				C3F59BCF0DF9F6DD10D208EA /* [CP] Embed Pods Frameworks */,
+				F622C406A77DE4A4033E2DF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,14 +372,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = tnantoka;
 				TargetAttributes = {
 					9BF8EBE31CC1D23500901730 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 					9BF8EBF71CC1D23500901730 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 9BF8EBE31CC1D23500901730;
 					};
 				};
@@ -443,49 +447,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A363510848B05ACB65EC4367 /* Copy Pods Resources */ = {
+		8780C2095541C47EAAD19B61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AC1B6AEB3E6FE584BDAE84BA /* Check Pods Manifest.lock */ = {
+		C3F59BCF0DF9F6DD10D208EA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenerativeSwift/Pods-GenerativeSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6976CB34200E4DD199E96E5 /* Embed Pods Frameworks */ = {
+		F622C406A77DE4A4033E2DF2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenerativeSwift/Pods-GenerativeSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -577,8 +581,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -622,8 +628,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -642,31 +650,36 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		9BF8EC021CC1D23500901730 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F468888C8E37247FB8A35B26 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 3AEBE4A7DB127B0990454486 /* Pods-GenerativeSwift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GenerativeSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.GenerativeSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		9BF8EC031CC1D23500901730 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5677B446356EAAFA84B2EA67 /* Pods.release.xcconfig */;
+			baseConfigurationReference = D1A0A8A8B0ED1E1F5CA568E3 /* Pods-GenerativeSwift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GenerativeSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.GenerativeSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -678,6 +691,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.GenerativeSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenerativeSwift.app/GenerativeSwift";
 			};
 			name = Debug;
@@ -690,6 +704,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.GenerativeSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenerativeSwift.app/GenerativeSwift";
 			};
 			name = Release;

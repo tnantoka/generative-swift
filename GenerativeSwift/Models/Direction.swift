@@ -9,17 +9,17 @@
 import Foundation
 
 enum Direction: UInt32 {
-    case North
-    case NorthEast
-    case East
-    case SouthEast
-    case South
-    case SouthWest
-    case West
-    case NorthWest
+    case north
+    case northEast
+    case east
+    case southEast
+    case south
+    case southWest
+    case west
+    case northWest
     
     static var last: Direction {
-        return .NorthWest
+        return .northWest
     }
     
     static func random() -> Direction {

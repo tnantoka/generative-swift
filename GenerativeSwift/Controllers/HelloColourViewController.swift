@@ -24,16 +24,16 @@ class HelloColourViewController: BaseCanvasController {
     override func setup() {
         rectangle.strokeColor = nil
         canvas.add(rectangle)
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.updateRectangle(center)
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.updateRectangle(center)
         }
         updateRectangle(canvas.center)
     }
     
-    func updateRectangle(point: Point) {
+    func updateRectangle(_ point: Point) {
         let width = point.x + 1
         rectangle.frame.width = width
         rectangle.frame.height = width * canvas.height / canvas.width

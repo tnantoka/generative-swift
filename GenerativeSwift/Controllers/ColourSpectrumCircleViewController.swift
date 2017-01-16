@@ -28,27 +28,27 @@ class ColourSpectrumCircleViewController: BaseCanvasController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        slider.frame = CGRectMake(0, 0, CGRectGetWidth(view.bounds) - 40, 34)
+        slider.frame = CGRect(x: 0, y: 0, width: view.bounds.width - 40, height: 34)
         slider.maximumValue = Float(segments.indices.last ?? 0)
         slider.minimumValue = 0
-        slider.continuous = false
-        slider.addTarget(self, action: #selector(sliderChanged), forControlEvents: .ValueChanged)
+        slider.isContinuous = false
+        slider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
         let item = UIBarButtonItem(customView: slider)
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, item, flexible]
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
     }
     
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateCircle()
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.point = center
             self.updateCircle()
         }
@@ -68,7 +68,7 @@ class ColourSpectrumCircleViewController: BaseCanvasController {
         let radius = canvas.width * 0.4
         
         var start = 0.0
-        angleStep.stride(through: 360.0, by: angleStep).forEach { angle in
+        stride(from: angleStep, through: 360.0, by: angleStep).forEach { angle in
             let end = degToRad(angle)
 
             let shape = createShape(radius, start: start, end: end)
@@ -84,7 +84,7 @@ class ColourSpectrumCircleViewController: BaseCanvasController {
         }
     }
     
-    func createShape(radius: Double, start: Double, end: Double) -> Shape {
+    func createShape(_ radius: Double, start: Double, end: Double) -> Shape {
         let point1 = Point(
             canvas.center.x + cos(start) * radius,
             canvas.center.y + sin(start) * radius
@@ -98,7 +98,7 @@ class ColourSpectrumCircleViewController: BaseCanvasController {
         return triangle
     }
     
-    func sliderChanged(sender: AnyObject) {
+    func sliderChanged(_ sender: AnyObject) {
         slider.value = round(slider.value)
         updateCircle()
     }

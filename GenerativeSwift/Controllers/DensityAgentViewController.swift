@@ -37,17 +37,17 @@ class DensityAgentViewController: GrowthAgentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let up = UIBarButtonItem(title: "↑", style: .Plain, target: self, action: #selector(upTapped))
-        let down = UIBarButtonItem(title: "↓", style: .Plain, target: self, action: #selector(downTapped))
+        let up = UIBarButtonItem(title: "↑", style: .plain, target: self, action: #selector(upTapped))
+        let down = UIBarButtonItem(title: "↓", style: .plain, target: self, action: #selector(downTapped))
         
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, startItem, flexible, stopItem, flexible, up, down, flexible]
     }
     
     override func setup() {
         super.setup()
         
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.mousePressed = !self.mousePressed
             self.point = center
         }
@@ -76,7 +76,7 @@ class DensityAgentViewController: GrowthAgentViewController {
             }
             
             intersection = false
-            for (i, p) in points.enumerate() {
+            for (i, p) in points.enumerated() {
                 let dist = distance(p, rhs: point)
                 if dist < r + radiuses[i] {
                     intersection = true
@@ -91,7 +91,7 @@ class DensityAgentViewController: GrowthAgentViewController {
             r = canvas.width
             var closestIndex = 0
             
-            for (i, p) in points.enumerate() {
+            for (i, p) in points.enumerated() {
                 let d = distance(p, rhs: point) - radiuses[i]
                 if r > d  {
                     r = d
@@ -123,16 +123,16 @@ class DensityAgentViewController: GrowthAgentViewController {
         }
     }
     
-    override func configureCircle(circle: Circle) {
-        circle.strokeColor = Color(UIColor.blackColor())
+    override func configureCircle(_ circle: Circle) {
+        circle.strokeColor = Color(UIColor.black)
         circle.fillColor = nil
     }
     
-    func upTapped(sender: AnyObject) {
+    func upTapped(_ sender: AnyObject) {
         mouseRect += 4.0
     }
     
-    func downTapped(sender: AnyObject) {
+    func downTapped(_ sender: AnyObject) {
         mouseRect = max(mouseRect - 4.0, 1.0)
     }
 }

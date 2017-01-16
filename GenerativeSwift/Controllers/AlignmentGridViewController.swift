@@ -12,7 +12,7 @@ import C4
 class AlignmentGridViewController: BaseCanvasController {
     var form = [Shape]()
     var point = Point(0, 0)
-    var randomSeed = UInt32(time(nil))
+    var randomSeed = time(nil)
     
     let tileCountX = 10
     
@@ -45,24 +45,24 @@ class AlignmentGridViewController: BaseCanvasController {
         
         segmentedControl.sizeToFit()
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
         let item = UIBarButtonItem(customView: segmentedControl)
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, item, flexible]
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
     }
     
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateForm()
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
-            self.randomSeed = UInt32(time(nil))
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
+            self.randomSeed = time(nil)
             self.updateForm()
         }
         point = canvas.center
@@ -70,7 +70,7 @@ class AlignmentGridViewController: BaseCanvasController {
     }
     
     func updateForm() {
-        srand(randomSeed)
+        srand48(randomSeed)
 
         for shape in form {
             shape.removeFromSuperview()
@@ -88,7 +88,7 @@ class AlignmentGridViewController: BaseCanvasController {
                 )
                 let line: Line
 
-                if rand() % 2 == 0 {
+                if drand48() > 0.5 {
                     line = Line([
                         pos,
                         Point(pos.x + tileSize, pos.y + tileSize),
@@ -108,7 +108,7 @@ class AlignmentGridViewController: BaseCanvasController {
         }
     }
     
-    func segmentedControlChanged(sender: AnyObject) {
+    func segmentedControlChanged(_ sender: AnyObject) {
         updateForm()
     }
 }

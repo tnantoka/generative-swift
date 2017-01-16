@@ -23,17 +23,17 @@ class HelloFormViewController: BaseCanvasController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updateCircle()
     }
     
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateCircle()
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.point = center
             self.updateCircle()
         }
@@ -47,7 +47,7 @@ class HelloFormViewController: BaseCanvasController {
         createForm(circleResolution, radius: radius, angle: angle)
     }
     
-    func createForm(circleResolution: Int, radius: Double, angle: Double) {
+    func createForm(_ circleResolution: Int, radius: Double, angle: Double) {
         for shape in form {
             shape.removeFromSuperview()
         }
@@ -63,7 +63,7 @@ class HelloFormViewController: BaseCanvasController {
         }
     }
     
-    func circlePoint(i: Int, angle: Double, radius: Double) -> Point {
+    func circlePoint(_ i: Int, angle: Double, radius: Double) -> Point {
         let x = canvas.center.x + cos(angle * Double(i)) * radius
         let y = canvas.center.y + sin(angle * Double(i)) * radius
         return Point(x, y)

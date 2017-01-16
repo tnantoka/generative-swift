@@ -73,16 +73,16 @@ class TableViewController: UITableViewController {
         title = "Generative Swift"
         tableView.rowHeight = 88.0
         
-        let infoButton = UIButton(type: .InfoLight)
-        infoButton.addTarget(self, action: #selector(infoTapped), forControlEvents: .TouchUpInside)
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(infoTapped), for: .touchUpInside)
         let infoItem = UIBarButtonItem(customView: infoButton)
         navigationItem.leftBarButtonItem = infoItem
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(true, animated: true)
-        navigationController?.interactivePopGestureRecognizer?.enabled = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,18 +92,18 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return sections.count
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return rows[section].count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
         let row = rows[indexPath.section][indexPath.row]
@@ -148,12 +148,12 @@ class TableViewController: UITableViewController {
     }
     */
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = rows[indexPath.section][indexPath.row]
         navigationController?.pushViewController(row, animated: true)
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
     }
     
@@ -167,7 +167,7 @@ class TableViewController: UITableViewController {
     }
     */
 
-    func infoTapped(sender: AnyObject) {
+    func infoTapped(_ sender: AnyObject) {
         let aboutController = RFAboutViewController(
             appName: nil,
             appVersion: nil,
@@ -175,18 +175,18 @@ class TableViewController: UITableViewController {
             copyrightHolderName: "tnantoka",
             contactEmail: nil,
             contactEmailTitle: nil,
-            websiteURL: NSURL(string: "https://github.com/tnantoka/generative-swift"),
+            websiteURL: URL(string: "https://github.com/tnantoka/generative-swift"),
             websiteURLTitle: nil,
             pubYear: "2016")
         
         let navController = UINavigationController(rootViewController: aboutController)
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneTapped))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
         navController.navigationItem.leftBarButtonItem = doneItem
 
-        presentViewController(navController, animated: true, completion: nil)
+        present(navController, animated: true, completion: nil)
     }
     
-    func doneTapped(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func doneTapped(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 }

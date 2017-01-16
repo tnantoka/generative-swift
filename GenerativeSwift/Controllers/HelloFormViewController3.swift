@@ -45,11 +45,11 @@ class HelloFormViewController3: HelloFormViewController2 {
         segmentedControl.sizeToFit()
         segmentedControl.selectedSegmentIndex = 0
         let item = UIBarButtonItem(customView: segmentedControl)
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, autoItem, flexible, circleItem, flexible, item, flexible]
     }
     
-    override func nextX(x: Double) -> Double {
+    override func nextX(_ x: Double) -> Double {
         segmentedControl.selectedSegmentIndex = random(min: 0, max: segmentedControl.numberOfSegments)
         
         return super.nextX(x)

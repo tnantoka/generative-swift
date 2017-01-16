@@ -39,19 +39,19 @@ class MovementGridViewController2: MovementGridViewController {
         
         segmentedControl.sizeToFit()
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
         let item = UIBarButtonItem(customView: segmentedControl)
         
-        let up = UIBarButtonItem(title: "↑", style: .Plain, target: self, action: #selector(upTapped))
-        let down = UIBarButtonItem(title: "↓", style: .Plain, target: self, action: #selector(downTapped))
-        let left = UIBarButtonItem(title: "←", style: .Plain, target: self, action: #selector(leftTapped))
-        let right = UIBarButtonItem(title: "→", style: .Plain, target: self, action: #selector(rightTapped))
+        let up = UIBarButtonItem(title: "↑", style: .plain, target: self, action: #selector(upTapped))
+        let down = UIBarButtonItem(title: "↓", style: .plain, target: self, action: #selector(downTapped))
+        let left = UIBarButtonItem(title: "←", style: .plain, target: self, action: #selector(leftTapped))
+        let right = UIBarButtonItem(title: "→", style: .plain, target: self, action: #selector(rightTapped))
         
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, item, flexible, up, down, left, right, flexible]
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
     }
@@ -78,7 +78,7 @@ class MovementGridViewController2: MovementGridViewController {
     }
     
     override func updateForm() {
-        srand(randomSeed)
+        srand48(randomSeed)
 
         (0..<tileCountY).forEach { gridY in
             (0..<tileCountX).forEach { gridX in
@@ -110,32 +110,32 @@ class MovementGridViewController2: MovementGridViewController {
         }
     }
     
-    func segmentedControlChanged(sender: AnyObject) {
+    func segmentedControlChanged(_ sender: AnyObject) {
         changeColor()
         updateForm()
     }
 
-    func upTapped(sender: AnyObject) {
+    func upTapped(_ sender: AnyObject) {
         changeSize(0)
         updateForm()
     }
 
-    func downTapped(sender: AnyObject) {
+    func downTapped(_ sender: AnyObject) {
         changeSize(1)
         updateForm()
     }
 
-    func leftTapped(sender: AnyObject) {
+    func leftTapped(_ sender: AnyObject) {
         changeSize(2)
         updateForm()
     }
 
-    func rightTapped(sender: AnyObject) {
+    func rightTapped(_ sender: AnyObject) {
         changeSize(3)
         updateForm()
     }
 
-    func changeSize(index: Int) {
+    func changeSize(_ index: Int) {
         switch index {
         case 0:
             backSize += 2
@@ -153,8 +153,8 @@ class MovementGridViewController2: MovementGridViewController {
     func changeColor() {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            backColor = Color(UIColor.blackColor())
-            foreColor = Color(UIColor.whiteColor())
+            backColor = Color(UIColor.black)
+            foreColor = Color(UIColor.white)
             alphaBack = 1.0
             alphaFore = 1.0
             backSize = 20.0

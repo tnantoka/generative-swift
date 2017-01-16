@@ -12,7 +12,7 @@ import C4
 class ComplexModulesGridViewController: BaseCanvasController {
     var form = [Shape]()
     var point = Point(0, 0)
-    var randomSeed = UInt32(time(nil))
+    var randomSeed = time(nil)
     
     let tileCountX = 6
     
@@ -33,12 +33,12 @@ class ComplexModulesGridViewController: BaseCanvasController {
     }
     
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateForm()
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
-            self.randomSeed = UInt32(time(nil))
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
+            self.randomSeed = time(nil)
             self.updateForm()
         }
         point = canvas.center
@@ -46,7 +46,7 @@ class ComplexModulesGridViewController: BaseCanvasController {
     }
     
     func updateForm() {
-        srand(randomSeed)
+        srand48(randomSeed)
 
         for shape in form {
             shape.removeFromSuperview()
@@ -59,7 +59,7 @@ class ComplexModulesGridViewController: BaseCanvasController {
         let circleCount = Int(point.x / 30 + 1)
         (0..<tileCountY).forEach { gridY in
             (0..<tileCountX).forEach { gridX in
-                let toggle = rand() % 4
+                let toggle = arc4random() % 4
                 (0..<circleCount).forEach { i in
                     let circle = Circle(frame: Rect(0, 0, 0, 0))
                     circle.strokeColor = Color(UIColor(white: 0.5, alpha: 1.0))
@@ -107,8 +107,8 @@ class ComplexModulesGridViewController: BaseCanvasController {
 //        }
     }
     
-    func randomX(x: Double) -> Double {
-        let sign = rand() % 2 == 0 ? 1.0 : -1.0
-        return sign * x * Double(rand() % 100) / 100
+    func randomX(_ x: Double) -> Double {
+        let sign = arc4random() % 2 == 0 ? 1.0 : -1.0
+        return sign * x * Double(arc4random() % 100) / 100
     }
 }

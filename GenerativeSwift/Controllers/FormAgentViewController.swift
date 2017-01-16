@@ -30,7 +30,7 @@ class FormAgentViewController: StupidAgentViewController {
     override func setup() {
         super.setup()
         
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.point = center
             self.clearPoints()
         }
@@ -51,7 +51,7 @@ class FormAgentViewController: StupidAgentViewController {
         let first = Point(center.x + points[0].x, center.y + points[0].y)
         let last = Point(center.x + points[formResolution - 1].x, center.y + points[formResolution - 1].y)
         path.moveToPoint(first)
-        1.stride(to: formResolution - 1, by: 2).forEach { i in
+        stride(from: 1, to: formResolution - 1, by: 2).forEach { i in
             let end = Point(center.x + points[i + 1].x, center.y + points[i + 1].y)
             let control = Point(center.x + points[i].x, center.y + points[i].y)
             path.addQuadCurveToPoint(end, control: control)

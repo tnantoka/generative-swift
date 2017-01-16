@@ -37,7 +37,7 @@ class GrowthAgentViewController: StupidAgentViewController {
     override func setup() {
         super.setup()
         
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.drawTemp = !self.drawTemp
         }
     }
@@ -66,7 +66,7 @@ class GrowthAgentViewController: StupidAgentViewController {
         
         var closestDist = Double.infinity
         var closestIndex = 0
-        for (i, p) in points.enumerate() {
+        for (i, p) in points.enumerated() {
             let dist = distance(p, rhs: point)
             if dist < closestDist {
                 closestDist = dist
@@ -96,13 +96,13 @@ class GrowthAgentViewController: StupidAgentViewController {
         addCircle(closestPoint, radius: r)
     }
     
-    func addCircle(center: Point, radius: Double) {
+    func addCircle(_ center: Point, radius: Double) {
         let circle = Circle(center: center, radius: radius)
         configureCircle(circle)
         canvas.add(circle)
     }
     
-    func configureCircle(circle: Circle) {
+    func configureCircle(_ circle: Circle) {
         circle.strokeColor = nil
         circle.fillColor = Color(UIColor(white: 50.0 / 255.0, alpha: 1.0))
     }

@@ -20,11 +20,11 @@ class BaseCanvasController: UIViewController {
     
     lazy var name: String = {
         return self.controllerName
-            .stringByReplacingOccurrencesOfString("ViewController", withString: "")
+            .replacingOccurrences(of: "ViewController", with: "")
     }()
     
     lazy var controllerName: String = {
-        return NSStringFromClass(self.dynamicType).stringByReplacingOccurrencesOfString("GenerativeSwift.", withString: "")
+        return NSStringFromClass(type(of: self)).replacingOccurrences(of: "GenerativeSwift.", with: "")
     }()
     
     init() {
@@ -39,8 +39,8 @@ class BaseCanvasController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let trashItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: #selector(trashTapped))
-        let actionItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: #selector(actionTapped))
+        let trashItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(trashTapped))
+        let actionItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actionTapped))
         var items = [actionItem]
         if trash {
             items.append(trashItem)
@@ -53,19 +53,19 @@ class BaseCanvasController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func trashTapped(sender: AnyObject) {
-        let alertController = UIAlertController(title: "Clear Canvas", message: "Are You Sure?", preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default) { _ in self.clear() })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(alertController, animated: true, completion: nil)
+    func trashTapped(_ sender: AnyObject) {
+        let alertController = UIAlertController(title: "Clear Canvas", message: "Are You Sure?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in self.clear() })
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
     
-    func actionTapped(sender: AnyObject) {
-        let alertController = UIAlertController(title: "Actions", message: nil, preferredStyle: .ActionSheet)
-        alertController.addAction(UIAlertAction(title: "Save as an Image", style: .Default) { _ in self.save() })
-        alertController.addAction(UIAlertAction(title: "Source Code", style: .Default) { _ in self.github() })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(alertController, animated: true, completion: nil)
+    func actionTapped(_ sender: AnyObject) {
+        let alertController = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Save as an Image", style: .default) { _ in self.save() })
+        alertController.addAction(UIAlertAction(title: "Source Code", style: .default) { _ in self.github() })
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
     
     func clear() {
@@ -82,26 +82,26 @@ class BaseCanvasController: UIViewController {
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
         
         let context = UIGraphicsGetCurrentContext()!
-        view.layer.renderInContext(context)
+        view.layer.render(in: context)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.presentViewController(activityController, animated: true, completion: nil)
+        self.present(activityController, animated: true, completion: nil)
     }
     
     func github() {
-        guard let url = NSURL(string: "https://github.com/tnantoka/generative-swift/blob/master/GenerativeSwift/Controllers/\(controllerName).swift") else { return }
-        let safariController = SFSafariViewController(URL: url)
+        guard let url = URL(string: "https://github.com/tnantoka/generative-swift/blob/master/GenerativeSwift/Controllers/\(controllerName).swift") else { return }
+        let safariController = SFSafariViewController(url: url)
         safariController.title = title
         navigationController?.pushViewController(safariController, animated: true)
     }
     
     // MARK: - C4.CanvasController
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         canvas.backgroundColor = C4Grey
@@ -109,7 +109,7 @@ class BaseCanvasController: UIViewController {
         setup()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         clear()
     }

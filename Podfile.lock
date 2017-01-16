@@ -1,13 +1,15 @@
 PODS:
-  - C4 (HEAD based on 1.1.0)
-  - RFAboutView-Swift (HEAD based on 1.0.11)
+  - C4 (2.1.1)
+  - RFAboutView-Swift (2.0.1)
 
 DEPENDENCIES:
-  - C4 (HEAD)
-  - RFAboutView-Swift (HEAD)
+  - C4
+  - RFAboutView-Swift
 
 SPEC CHECKSUMS:
-  C4: 376f0283d94033b954972d963bf1acdf13eb2a7d
-  RFAboutView-Swift: 51d4d26859b05c4717de5fac4d28c7347b1fa816
+  C4: 50c631f37096fd84498b462dce124552ad958d88
+  RFAboutView-Swift: dc31db0e7bc890ab6c9e1ca8f50e8f97bdba9622
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: b9a113a2f8e2a2e745f200f1bfd4f2753799f9ec
+
+COCOAPODS: 1.1.0

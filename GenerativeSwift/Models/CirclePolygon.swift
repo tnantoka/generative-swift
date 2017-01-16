@@ -9,7 +9,7 @@
 import Foundation
 import C4
 
-public class CirclePolygon: Polygon {
+open class CirclePolygon: Polygon {
     init(_ points: [Point], _ size: Size) {
         super.init()
         

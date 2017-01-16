@@ -32,25 +32,25 @@ class DrawingBrushViewController: DensityAgentViewController {
         super.viewDidLoad()
         
         let colorItems: [UIBarButtonItem] = (1...5).map { i in
-            let item = UIBarButtonItem(title: "\(i)", style: .Plain, target: self, action: #selector(colorTapped))
+            let item = UIBarButtonItem(title: "\(i)", style: .plain, target: self, action: #selector(colorTapped))
             item.tag = i
             return item
         }
         
-        let arrowItems: [UIBarButtonItem] = ["↑", "↓", "←", "→"].enumerate().map { i, t in
-            let item = UIBarButtonItem(title: t, style: .Plain, target: self, action: #selector(arrowTapped))
+        let arrowItems: [UIBarButtonItem] = ["↑", "↓", "←", "→"].enumerated().map { i, t in
+            let item = UIBarButtonItem(title: t, style: .plain, target: self, action: #selector(arrowTapped))
             item.tag = i
             return item
         }
         
-        let auto = UIBarButtonItem(title: "Auto", style: .Plain, target: self, action: #selector(autoTapped))
-        let reverse = UIBarButtonItem(title: "Reverse", style: .Plain, target: self, action: #selector(reverseTapped))
+        let auto = UIBarButtonItem(title: "Auto", style: .plain, target: self, action: #selector(autoTapped))
+        let reverse = UIBarButtonItem(title: "Reverse", style: .plain, target: self, action: #selector(reverseTapped))
         
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, auto, flexible, reverse, flexible] + colorItems + [flexible] + arrowItems + [flexible]
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         start()
     }
@@ -81,15 +81,15 @@ class DrawingBrushViewController: DensityAgentViewController {
         color = defaultColor
     }
     
-    func reverseTapped(sender: AnyObject) {
+    func reverseTapped(_ sender: AnyObject) {
         reverse()
     }
     
-    func colorTapped(sender: AnyObject) {
+    func colorTapped(_ sender: AnyObject) {
         changeColor(sender.tag)
     }
 
-    func arrowTapped(sender: AnyObject) {
+    func arrowTapped(_ sender: AnyObject) {
         switch sender.tag {
         case 0?:
             lineLength += 5
@@ -108,7 +108,7 @@ class DrawingBrushViewController: DensityAgentViewController {
         lineLength = Double(random(min: 50, max: 160))
     }
     
-    func changeColor(tag: Int?) {
+    func changeColor(_ tag: Int?) {
         switch tag {
         case 1?:
             color = defaultColor
@@ -135,7 +135,7 @@ class DrawingBrushViewController: DensityAgentViewController {
         angleSpeed *= -1
     }
     
-    func autoTapped(sender: AnyObject) {
+    func autoTapped(_ sender: AnyObject) {
         clear()
         mousePressed = false
         point = canvas.center

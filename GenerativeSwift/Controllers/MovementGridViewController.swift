@@ -12,7 +12,7 @@ import C4
 class MovementGridViewController: BaseCanvasController {
     var form = [Shape]()
     var point = Point(0, 0)
-    var randomSeed = UInt32(time(nil))
+    var randomSeed = time(nil)
 
     let tileCountX = 10
     
@@ -33,12 +33,12 @@ class MovementGridViewController: BaseCanvasController {
     }
     
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateForm()
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
-            self.randomSeed = UInt32(time(nil))
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
+            self.randomSeed = time(nil)
             self.updateForm()
         }
         point = Point(0, canvas.center.y)
@@ -59,7 +59,7 @@ class MovementGridViewController: BaseCanvasController {
     }
     
     func updateForm() {
-        srand(randomSeed)
+        srand48(randomSeed)
 
         (0..<tileCountY).forEach { gridY in
             (0..<tileCountX).forEach { gridX in
@@ -82,8 +82,8 @@ class MovementGridViewController: BaseCanvasController {
         }
     }
     
-    func randomX(x: Double) -> Double {
-        let sign = rand() % 2 == 0 ? 1.0 : -1.0
-        return sign * x * Double(rand() % 100) / 100
+    func randomX(_ x: Double) -> Double {
+        let sign = arc4random() % 2 == 0 ? 1.0 : -1.0
+        return sign * x * Double(arc4random() % 100) / 100
     }
 }

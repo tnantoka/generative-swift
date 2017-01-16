@@ -10,7 +10,7 @@ import Foundation
 import C4
 
 extension Line {
-    func contains(point: Point) -> Bool {
+    func contains(_ point: Point) -> Bool {
 //        return hitTest(point)
         let x0 = points[0].x
         let y0 = points[0].y

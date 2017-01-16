@@ -50,7 +50,7 @@ class DensityCircleAgentViewController: DensityAgentViewController {
             r = minRadius
             
             intersection = false
-            for (i, p) in points.enumerate() {
+            for (i, p) in points.enumerated() {
                 if i == 0 {
                     continue
                 }
@@ -64,7 +64,7 @@ class DensityCircleAgentViewController: DensityAgentViewController {
             if !intersection {
                 r = canvas.width
 
-                for (i, p) in points.enumerate() {
+                for (i, p) in points.enumerated() {
                     if i == 0 {
                         continue
                     }
@@ -98,12 +98,12 @@ class DensityCircleAgentViewController: DensityAgentViewController {
         }
     }
 
-    override func upTapped(sender: AnyObject) {
+    override func upTapped(_ sender: AnyObject) {
         super.upTapped(sender)
         clear()
     }
     
-    override func downTapped(sender: AnyObject) {
+    override func downTapped(_ sender: AnyObject) {
         mouseRect = max(mouseRect - 4.0, minMouseRect)
         clear()
     }

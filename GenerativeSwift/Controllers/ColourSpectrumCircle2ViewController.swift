@@ -20,7 +20,7 @@ class ColourSpectrumCircleViewController2: ColourSpectrumCircleViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createShape(radius: Double, start: Double, end: Double) -> Shape {
+    override func createShape(_ radius: Double, start: Double, end: Double) -> Shape {
         let wedge = Wedge(center: canvas.center, radius: radius, start: start, end: end)
         return wedge
     }

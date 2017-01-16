@@ -32,22 +32,22 @@ class HelloFormViewController2: HelloFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        autoItem = UIBarButtonItem(title: "Auto", style: .Plain, target: self, action: #selector(autoTapped))
-        circleItem = UIBarButtonItem(title: "Auto (Circle)", style: .Plain, target: self, action: #selector(circleTapped))
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        autoItem = UIBarButtonItem(title: "Auto", style: .plain, target: self, action: #selector(autoTapped))
+        circleItem = UIBarButtonItem(title: "Auto (Circle)", style: .plain, target: self, action: #selector(circleTapped))
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, autoItem, flexible, circleItem, flexible]
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
-        navigationController?.interactivePopGestureRecognizer?.enabled = false
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
     }
 
-    override func createForm(circleResolution: Int, radius: Double, angle: Double) {
+    override func createForm(_ circleResolution: Int, radius: Double, angle: Double) {
         let points = (0...circleResolution).map { i in
             return circlePoint(i, angle: angle, radius: radius)
         }
@@ -57,7 +57,7 @@ class HelloFormViewController2: HelloFormViewController {
         canvas.add(polygon)
     }
     
-    func autoTapped(sender: AnyObject) {
+    func autoTapped(_ sender: AnyObject) {
         clear()
         
         var x = nextX(canvas.width)
@@ -69,7 +69,7 @@ class HelloFormViewController2: HelloFormViewController {
         }
     }
     
-    func circleTapped(sender: AnyObject) {
+    func circleTapped(_ sender: AnyObject) {
         clear()
         
 //        var x = 10.0
@@ -92,7 +92,7 @@ class HelloFormViewController2: HelloFormViewController {
         }
     }
     
-    func drawRandom(x: Double, y: Double) {
+    func drawRandom(_ x: Double, y: Double) {
         (0..<random(min: 10, max: 30)).forEach { _ in
             let randomX = positionWithNoise(x)
             point = Point(randomX, y)
@@ -102,13 +102,13 @@ class HelloFormViewController2: HelloFormViewController {
         }
     }
     
-    func positionWithNoise(pos: Double) -> Double {
+    func positionWithNoise(_ pos: Double) -> Double {
         let min = random(min: 85, max: 90)
         let max = random(min: 110, max: 115)
         return pos * Double(random(min: min, max: max)) / 100.0
     }
     
-    func nextX(x: Double) -> Double {
+    func nextX(_ x: Double) -> Double {
         let min = random(min: 55, max: 65)
         let max = random(min: 80, max: 90)
         return x * Double(random(min: min, max: max)) / 100.0

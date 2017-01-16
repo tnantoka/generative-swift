@@ -13,7 +13,7 @@ class StupidAgentViewController: BaseCanvasController {
     var point = Point(0, 0)
     var x = 0.0
     var y = 0.0
-    var timer: NSTimer?
+    var timer: Foundation.Timer?
     
     var step: Double {
         return 1.0
@@ -36,25 +36,25 @@ class StupidAgentViewController: BaseCanvasController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startItem = UIBarButtonItem(title: "Start", style: .Plain, target: self, action: #selector(start))
-        stopItem = UIBarButtonItem(title: "Stop", style: .Plain, target: self, action: #selector(stop))
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        startItem = UIBarButtonItem(title: "Start", style: .plain, target: self, action: #selector(start))
+        stopItem = UIBarButtonItem(title: "Stop", style: .plain, target: self, action: #selector(stop))
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, startItem, flexible, stopItem, flexible]
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
         stop()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         stop()
     }
     
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
         }
         clear()
@@ -66,24 +66,24 @@ class StupidAgentViewController: BaseCanvasController {
         (0..<Int(speed)).forEach { _ in
             let direction = Direction.random()
             switch direction {
-            case .North:
+            case .north:
                 y -= step
-            case .NorthEast:
+            case .northEast:
                 x += step
                 y -= step
-            case .East:
+            case .east:
                 x += step
-            case .SouthEast:
+            case .southEast:
                 x += step
                 y += step
-            case .South:
+            case .south:
                 y += step
-            case .SouthWest:
+            case .southWest:
                 x -= step
                 y += step
-            case .West:
+            case .west:
                 x -= step
-            case .NorthWest:
+            case .northWest:
                 x -= step
                 y -= step
             }
@@ -115,15 +115,15 @@ class StupidAgentViewController: BaseCanvasController {
     }
     
     func start() {
-        startItem.enabled = false
-        stopItem.enabled = true
+        startItem.isEnabled = false
+        stopItem.isEnabled = true
 
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(draw), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(draw), userInfo: nil, repeats: true)
     }
     
     func stop() {
-        startItem.enabled = true
-        stopItem.enabled = false
+        startItem.isEnabled = true
+        stopItem.isEnabled = false
 
         timer?.invalidate()
     }

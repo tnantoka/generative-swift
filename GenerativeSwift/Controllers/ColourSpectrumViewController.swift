@@ -22,16 +22,16 @@ class ColourSpectrumViewController: BaseCanvasController {
     }
 
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.updateGrid(center)
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.updateGrid(center)
         }
         updateGrid(canvas.center)
     }
     
-    func updateGrid(point: Point) {
+    func updateGrid(_ point: Point) {
         for rectangle in grid {
             rectangle.removeFromSuperview()
         }
@@ -39,9 +39,9 @@ class ColourSpectrumViewController: BaseCanvasController {
         
         let stepX = point.x + 2
         let stepY = point.y + 2
-        
-        0.stride(to: canvas.height, by: stepY).forEach { y in
-            0.stride(to: canvas.width, by: stepX).forEach { x in
+       
+        stride(from: 0, to: canvas.height, by: stepY).forEach { y in
+            stride(from: 0, to: canvas.width, by: stepX).forEach { x in
                 let rectangle = Rectangle(frame: Rect(x, y, stepX, stepY))
                 rectangle.strokeColor = nil
                 rectangle.corner = Size(0, 0)

@@ -13,7 +13,7 @@ class IntelligentAgentViewController: StupidAgentViewController {
 
     var lines = [Line]()
     
-    var direction = Direction.South
+    var direction = Direction.south
     var angle = 0.0
     let angleCount = 7
     let minLength = 10.0
@@ -43,16 +43,16 @@ class IntelligentAgentViewController: StupidAgentViewController {
             
             var reachedBorder = false
             if y <= 5 {
-                direction = .South
+                direction = .south
                 reachedBorder = true
             } else if x >= canvas.width - 5 {
-                direction = .West
+                direction = .west
                 reachedBorder = true
             } else if y >= canvas.height - 5 {
-                direction = .North
+                direction = .north
                 reachedBorder = true
             } else if x <= 5 {
-                direction = .East
+                direction = .east
                 reachedBorder = true
             }
             
@@ -69,7 +69,7 @@ class IntelligentAgentViewController: StupidAgentViewController {
                 let dist = distance(Point(x, y), rhs: Point(crossX, crossY))
                 if dist >= minLength {
                     let line = Line(begin: Point(x, y), end: Point(crossX, crossY))
-                    line.strokeColor = Color(UIColor.blackColor())
+                    line.strokeColor = Color(UIColor.black)
                     line.lineWidth = 3
                     canvas.add(line)
                     lines.append(line)
@@ -91,13 +91,13 @@ class IntelligentAgentViewController: StupidAgentViewController {
     func randomAngle() -> Double {
         let angle = (Double(random(min: -angleCount, max: angleCount)) + 0.5) * 90 / Double(angleCount)
         switch direction {
-        case .North:
+        case .north:
             return angle - 90
-        case .East:
+        case .east:
             return angle
-        case .South:
+        case .south:
             return angle + 90
-        case .West:
+        case .west:
             return angle + 180
         default:
             fatalError()

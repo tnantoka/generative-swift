@@ -35,23 +35,23 @@ class ColourPaletteInterpolationViewController: BaseCanvasController {
         
         segmentedControl.sizeToFit()
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
         let item = UIBarButtonItem(customView: segmentedControl)
-        let flexible = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [flexible, item, flexible]
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: true)
     }
 
     override func setup() {
-        canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
+        let _ = canvas.addPanGestureRecognizer { locations, center, translation, velocity, state in
             self.point = center
             self.updateGrid()
         }
-        canvas.addTapGestureRecognizer { locations, center, state in
+        let _ = canvas.addTapGestureRecognizer { locations, center, state in
             self.shakeColors()
             self.updateGrid()
         }
@@ -125,7 +125,7 @@ class ColourPaletteInterpolationViewController: BaseCanvasController {
         }
     }
     
-    func segmentedControlChanged(sender: AnyObject) {
+    func segmentedControlChanged(_ sender: AnyObject) {
         updateGrid()
     }
 }
